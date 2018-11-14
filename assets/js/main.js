@@ -5,6 +5,9 @@ var ol_train = L.layerGroup();
 var ol_pwr = L.layerGroup();
 var ol_bob = L.layerGroup();
 var ol_mag = L.layerGroup();
+var ol_map = L.layerGroup();
+var ol_tape = L.layerGroup();
+var ol_rep = L.layerGroup();
 
 // the tile layer containing the image generated with `gdal2tiles --leaflet -p raster -w none <img> tiles`
 var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
@@ -13,7 +16,7 @@ var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
 
 // create the map
 var map = L.map('mapid', {
-  layers: [baselayer, ol_pa, ol_vault, ol_loc,ol_train,ol_pwr,ol_bob,ol_mag],
+  layers: [baselayer, ol_pa, ol_vault, ol_loc,ol_train,ol_pwr,ol_bob,ol_mag,ol_map,ol_tape,ol_rep],
   fullscreenControl: true,
   fullscreenControlOptions: {
     position: 'topleft'
@@ -47,10 +50,14 @@ var mark_tr = 'train';		//Train Station
 var mark_fc = 'bolt';		//Fusion Core
 var mark_bh = 'user-circle';	//Bobblehead
 var mark_ma = 'book-open';	//Magazine
+var mark_tm = 'map';		//Treasure Map
+var mark_tp = 'tape';		//Holo tape
+var mark_rp = 'receipt';	//Receipt
 
     L.marker(rc.unproject([931,1914]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
     L.marker(rc.unproject([1632,1799]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
     L.marker(rc.unproject([673,414]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
+    L.marker(rc.unproject([918,118]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
 
 
     L.marker(rc.unproject([805,985]), {icon: L.AwesomeMarkers.icon({icon: mark_va, prefix: 'fa', markerColor: 'purple', iconColor: 'yellow', extraClasses: 'fa-2x'}) }).bindTooltip("Vault 76").addTo(ol_vault);
@@ -80,7 +87,9 @@ var mark_ma = 'book-open';	//Magazine
     L.marker(rc.unproject([655,392]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: 'brown', extraClasses: 'fa-2x'}) }).bindTooltip("Aaronholdt Homestead").addTo(ol_loc);
     L.marker(rc.unproject([1035,2142]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: 'brown', extraClasses: 'fa-2x'}) }).bindTooltip("Riverside Manor").addTo(ol_loc);
     L.marker(rc.unproject([1406,1403]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: 'brown', extraClasses: 'fa-2x'}) }).bindTooltip("Horizon's Rest").addTo(ol_loc);
-
+    L.marker(rc.unproject([925,118]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: 'brown', extraClasses: 'fa-2x'}) }).bindTooltip("The Crosshair").addTo(ol_loc);
+    L.marker(rc.unproject([964,1315]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: 'brown', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Camp").addTo(ol_loc);
+    L.marker(rc.unproject([1121,1462]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: 'brown', extraClasses: 'fa-2x'}) }).bindTooltip("Sutton").addTo(ol_loc);
 
     L.marker(rc.unproject([1108,1545]), {icon: L.AwesomeMarkers.icon({icon: mark_tr, prefix: 'fa', markerColor: 'purple', iconColor: 'grey', extraClasses: 'fa-2x'}) }).bindTooltip("Sutton Station").addTo(ol_loc);
 
@@ -90,6 +99,20 @@ var mark_ma = 'book-open';	//Magazine
 
     L.marker(rc.unproject([1442,1418]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead").addTo(ol_bob);
 
+
+
+    L.marker(rc.unproject([1015,1187]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 5)").addTo(ol_map);
+    L.marker(rc.unproject([1245,1109]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure - Forest (Map 8)").addTo(ol_map);
+
+    L.marker(rc.unproject([788,950]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Nuka Tapper").addTo(ol_tape);
+    L.marker(rc.unproject([815,950]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - Vault 76").addTo(ol_tape);
+    L.marker(rc.unproject([973,1308]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - C.A.M.P.").addTo(ol_tape);
+    L.marker(rc.unproject([786,1466]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - Flatwoods").addTo(ol_tape);
+    L.marker(rc.unproject([699,1477]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Journal - Entry 1").addTo(ol_tape);
+    L.marker(rc.unproject([1131,1460]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Journal - Entry 2").addTo(ol_tape);
+
+
+    L.marker(rc.unproject([778,1498]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Delbert's Sunshine Oil").addTo(ol_rep);
 
 
 //Let's do our layer filters
@@ -104,6 +127,8 @@ var overlays = {
 	"Fusion Core": ol_pwr,
 	"Bobblehead": ol_bob,
 	"Magazine": ol_mag,
+	"Holotape": ol_tape,
+	"Recipe": ol_rep,
 };
 
 L.control.layers(null, overlays).addTo(map);
