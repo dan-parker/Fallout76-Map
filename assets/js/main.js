@@ -55,12 +55,12 @@ var mark_tm = 'map';		//Treasure Map
 var mark_tp = 'tape';		//Holo tape
 var mark_rp = 'receipt';	//Receipt
 
-    L.marker(rc.unproject([931,1914]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([1632,1799]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([673,414]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([918,118]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([358,296]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([391,2001]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'blue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
+    L.marker(rc.unproject([931,1914]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
+    L.marker(rc.unproject([1632,1799]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
+    L.marker(rc.unproject([673,414]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
+    L.marker(rc.unproject([918,118]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
+    L.marker(rc.unproject([358,296]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
+    L.marker(rc.unproject([391,2001]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
 
 
 
