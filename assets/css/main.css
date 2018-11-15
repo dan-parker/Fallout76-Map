@@ -106,10 +106,11 @@ textarea {
 
 html,body {height:100%;margin:0px;}
 i.fa:hover {
-  color: black;
+  opacity: 1.0;
 }
 i.fa {
   text-shadow: 2px 2px #272634;
+  opacity: 0.6;
 }
 #mapid {height:100%;}
 
