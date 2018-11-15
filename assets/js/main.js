@@ -8,6 +8,7 @@ var ol_mag = L.layerGroup();
 var ol_map = L.layerGroup();
 var ol_tape = L.layerGroup();
 var ol_rep = L.layerGroup();
+var ol_wb = L.layerGroup();
 
 // the tile layer containing the image generated with `gdal2tiles --leaflet -p raster -w none <img> tiles`
 var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
@@ -17,7 +18,7 @@ var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
 
 // create the map
 var map = L.map('mapid', {
-  layers: [baselayer, ol_pa, ol_vault, ol_loc,ol_train,ol_pwr,ol_bob,ol_mag,ol_map,ol_tape,ol_rep],
+  layers: [baselayer, ol_pa, ol_vault, ol_loc,ol_train,ol_pwr,ol_bob,ol_mag,ol_map,ol_tape,ol_rep,ol_wb],
   fullscreenControl: true,
   fullscreenControlOptions: {
     position: 'topleft'
@@ -67,23 +68,23 @@ var mark_rp = 'receipt';	//Receipt
     L.marker(rc.unproject([805,985]), {icon: L.AwesomeMarkers.icon({icon: mark_va, prefix: 'fa', markerColor: 'purple', iconColor: 'yellow', extraClasses: 'fa-2x'}) }).bindTooltip("Vault 76").addTo(ol_vault);
 
 
-    L.marker(rc.unproject([1140,975]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Gorge Junkyard").addTo(map);
-    L.marker(rc.unproject([892,1968]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Wade Airport").addTo(map);
-    L.marker(rc.unproject([433,646]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Tyler County Dirt Track").addTo(map);
-    L.marker(rc.unproject([1046,356]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Hemlock Holes").addTo(map);
-    L.marker(rc.unproject([1661,712]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Grafton Steel Yard").addTo(map);
-    L.marker(rc.unproject([617,1442]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Sunshine Meadows Industrial Farm").addTo(map);
-    L.marker(rc.unproject([377,1699]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Billings Homestead").addTo(map);
-    L.marker(rc.unproject([577,1931]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Poseidon Energy Plant WV-06").addTo(map);
-    L.marker(rc.unproject([1108,1807]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Lakeside Cabins").addTo(map);
-    L.marker(rc.unproject([638,2063]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Charleston Landfill").addTo(map);
-    L.marker(rc.unproject([592,2344]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Mount Blair").addTo(map);
-    L.marker(rc.unproject([2494,556]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Red Rocket Mega Stop").addTo(map);
-    L.marker(rc.unproject([1828,1143]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Monongah Power Plant").addTo(map);
-    L.marker(rc.unproject([1805,2380]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Spruce Knob").addTo(map);
-    L.marker(rc.unproject([1523,2731]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Federal Disposal Field HZ-21").addTo(map);
-    L.marker(rc.unproject([2892,925]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Thunder Mountain Power Plant").addTo(map);
-    L.marker(rc.unproject([2424,1415]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Berkeley Springs").addTo(map);
+    L.marker(rc.unproject([1140,975]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Gorge Junkyard").addTo(ol_wb);
+    L.marker(rc.unproject([892,1968]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Wade Airport").addTo(ol_wb);
+    L.marker(rc.unproject([433,646]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Tyler County Dirt Track").addTo(ol_wb);
+    L.marker(rc.unproject([1046,356]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Hemlock Holes").addTo(ol_wb);
+    L.marker(rc.unproject([1661,712]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Grafton Steel Yard").addTo(ol_wb);
+    L.marker(rc.unproject([617,1442]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Sunshine Meadows Industrial Farm").addTo(ol_wb);
+    L.marker(rc.unproject([377,1699]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Billings Homestead").addTo(ol_wb);
+    L.marker(rc.unproject([577,1931]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Poseidon Energy Plant WV-06").addTo(ol_wb);
+    L.marker(rc.unproject([1108,1807]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Lakeside Cabins").addTo(ol_wb);
+    L.marker(rc.unproject([638,2063]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Charleston Landfill").addTo(ol_wb);
+    L.marker(rc.unproject([592,2344]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Mount Blair").addTo(ol_wb);
+    L.marker(rc.unproject([2494,556]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Red Rocket Mega Stop").addTo(ol_wb);
+    L.marker(rc.unproject([1828,1143]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Monongah Power Plant").addTo(ol_wb);
+    L.marker(rc.unproject([1805,2380]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Spruce Knob").addTo(ol_wb);
+    L.marker(rc.unproject([1523,2731]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Federal Disposal Field HZ-21").addTo(ol_wb);
+    L.marker(rc.unproject([2892,925]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Thunder Mountain Power Plant").addTo(ol_wb);
+    L.marker(rc.unproject([2424,1415]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Berkeley Springs").addTo(ol_wb);
 
 
     L.marker(rc.unproject([821,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Flatwoods Lookout").addTo(ol_loc);
@@ -195,6 +196,8 @@ var overlays = {
 	"Magazine": ol_mag,
 	"Holotape": ol_tape,
 	"Recipe": ol_rep,
+	"Treasure Map": ol_map,
+	"Workshop": ol_wb,
 };
 
 L.control.layers(null, overlays).addTo(map);
