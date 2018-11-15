@@ -151,7 +151,12 @@ var mark_rp = 'receipt';	//Receipt
     L.marker(rc.unproject([1245,1109]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 8)").addTo(ol_map);
     L.marker(rc.unproject([1236,1795]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 9)").addTo(ol_map);
     L.marker(rc.unproject([1382,1336]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 10)").addTo(ol_map);
-
+    L.marker(rc.unproject([667,2649]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Ash Heap (Map 1)").addTo(ol_map);
+    L.marker(rc.unproject([850,2199]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Ash Heap (Map 2)").addTo(ol_map);
+    L.marker(rc.unproject([1010,556]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Toxic Valley (Map 1)").addTo(ol_map);
+    L.marker(rc.unproject([1326,468]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Toxic Valley (Map 2)").addTo(ol_map);
+    L.marker(rc.unproject([1586,663]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Toxic Valley (Map 3)").addTo(ol_map);
+    L.marker(rc.unproject([1719,276]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Toxic Valley (Map 4)").addTo(ol_map);
 
 
 
