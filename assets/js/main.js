@@ -166,8 +166,8 @@ var mark_rp = 'receipt';	//Receipt
     L.marker(rc.unproject([1976,1427]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Savage Divide (Map 8)").addTo(ol_map);
 
 
-    L.marker(rc.unproject([788,950]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Nuka Tapper").addTo(ol_tape);
-    L.marker(rc.unproject([815,950]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - Vault 76").addTo(ol_tape);
+    L.marker(rc.unproject([1604,817]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Grognak & The Ruby Ruins").addTo(ol_tape);
+    L.marker(rc.unproject([815,950]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Nuka Tapper<br>Overseer's Log - Vault 76").addTo(ol_tape);
     L.marker(rc.unproject([973,1308]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - C.A.M.P.").addTo(ol_tape);
     L.marker(rc.unproject([786,1466]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - Flatwoods").addTo(ol_tape);
     L.marker(rc.unproject([699,1477]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Journal - Entry 1").addTo(ol_tape);
