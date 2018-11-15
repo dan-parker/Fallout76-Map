@@ -1,5 +1,6 @@
 # Fallout76-Map
 A semi interactive map for Fallout 76
+Demo: https://dan-parker.github.io/Fallout76-Map/index.html
 
 A Fallout 76 map using the Leaflet map library
 https://leafletjs.com/
