@@ -66,7 +66,7 @@ var mark_rp = 'receipt';	//Receipt
 
     L.marker(rc.unproject([1140,975]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Gorge Junkyard").addTo(map);
     L.marker(rc.unproject([892,1968]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Wade Airport").addTo(map);
-
+   L.marker(rc.unproject([433,646]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Tyler County Dirt Track").addTo(map);
 
     L.marker(rc.unproject([821,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Flatwoods Lookout").addTo(ol_loc);
     L.marker(rc.unproject([1150,2078]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Torrance House").addTo(ol_loc);
@@ -91,11 +91,23 @@ var mark_rp = 'receipt';	//Receipt
     L.marker(rc.unproject([925,118]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("The Crosshair").addTo(ol_loc);
     L.marker(rc.unproject([964,1315]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Camp").addTo(ol_loc);
     L.marker(rc.unproject([1121,1462]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Sutton").addTo(ol_loc);
+    L.marker(rc.unproject([502,468]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Darling Sister's Lab").addTo(ol_loc);
+    L.marker(rc.unproject([517,649]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Tyler County Fairgrounds").addTo(ol_loc);
+    L.marker(rc.unproject([1268,1258]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Arktos Pharma").addTo(ol_loc);
+    L.marker(rc.unproject([1244,1501]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("East Kanawha Lookout").addTo(ol_loc);
+    L.marker(rc.unproject([1233,1430]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Helvetia").addTo(ol_loc);
+    L.marker(rc.unproject([870,1226]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Wixon Homestead").addTo(ol_loc);
+    L.marker(rc.unproject([812,1165]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Gilman Lumber Mill").addTo(ol_loc);
+    L.marker(rc.unproject([910,1044]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Isolated Cabin").addTo(ol_loc);
+    L.marker(rc.unproject([942,927]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("North Kanawha Lookout").addTo(ol_loc);
+    L.marker(rc.unproject([1418,1316]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Greg's Mine Supply").addTo(ol_loc);
+
 
     L.marker(rc.unproject([1108,1545]), {icon: L.AwesomeMarkers.icon({icon: mark_tr, prefix: 'fa', markerColor: 'purple', iconColor: 'grey', extraClasses: 'fa-2x'}) }).bindTooltip("Sutton Station").addTo(ol_loc);
 
 
     L.marker(rc.unproject([948,2032]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("Fusion Core").addTo(ol_pwr);
+    L.marker(rc.unproject([1245,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("Fusion Core").addTo(ol_pwr);
 
 
     L.marker(rc.unproject([1442,1418]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead").addTo(ol_bob);
@@ -111,9 +123,13 @@ var mark_rp = 'receipt';	//Receipt
     L.marker(rc.unproject([786,1466]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - Flatwoods").addTo(ol_tape);
     L.marker(rc.unproject([699,1477]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Journal - Entry 1").addTo(ol_tape);
     L.marker(rc.unproject([1131,1460]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Journal - Entry 2").addTo(ol_tape);
-
+    L.marker(rc.unproject([1283,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Test Log 9-23-77-A10<br>Test Log 3-12-78-A14").addTo(ol_tape);
 
     L.marker(rc.unproject([778,1498]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Delbert's Sunshine Oil").addTo(ol_rep);
+    L.marker(rc.unproject([514,448]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Delbert's Corn Pone").addTo(ol_rep);
+    L.marker(rc.unproject([476,628]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Swamp Tofu Soup").addTo(ol_rep);
+    L.marker(rc.unproject([1425,1421]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Silt Bean Puree").addTo(ol_rep);
+    L.marker(rc.unproject([1263,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Plan: Tinker's Workbench<br>Recipe: Glowing Fungus Puree").addTo(ol_rep);
 
 
 //Let's do our layer filters
