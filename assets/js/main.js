@@ -56,140 +56,146 @@ var mark_tm = 'map';		//Treasure Map
 var mark_tp = 'tape';		//Holo tape
 var mark_rp = 'receipt';	//Receipt
 
-    L.marker(rc.unproject([931,1914]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([1632,1799]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([673,414]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([918,118]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([358,296]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
-    L.marker(rc.unproject([391,2001]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("Power Armor").addTo(ol_pa);
+    L.marker(rc.unproject([931,1914]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
+    L.marker(rc.unproject([1632,1799]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
+    L.marker(rc.unproject([673,414]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
+    L.marker(rc.unproject([918,118]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
+    L.marker(rc.unproject([358,296]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
+    L.marker(rc.unproject([391,2001]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: 'steelblue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
 
 
 
-    L.marker(rc.unproject([805,985]), {icon: L.AwesomeMarkers.icon({icon: mark_va, prefix: 'fa', markerColor: 'purple', iconColor: 'yellow', extraClasses: 'fa-2x'}) }).bindTooltip("Vault 76").addTo(ol_vault);
+    L.marker(rc.unproject([805,985]), {icon: L.AwesomeMarkers.icon({icon: mark_va, prefix: 'fa', markerColor: 'purple', iconColor: 'yellow', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Vault 76</b>").addTo(ol_vault);
 
 
-    L.marker(rc.unproject([1140,975]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Gorge Junkyard").addTo(ol_wb);
-    L.marker(rc.unproject([892,1968]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Wade Airport").addTo(ol_wb);
-    L.marker(rc.unproject([433,646]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Tyler County Dirt Track").addTo(ol_wb);
-    L.marker(rc.unproject([1046,356]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Hemlock Holes").addTo(ol_wb);
-    L.marker(rc.unproject([1661,712]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Grafton Steel Yard").addTo(ol_wb);
-    L.marker(rc.unproject([617,1442]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Sunshine Meadows Industrial Farm").addTo(ol_wb);
-    L.marker(rc.unproject([377,1699]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Billings Homestead").addTo(ol_wb);
-    L.marker(rc.unproject([577,1931]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Poseidon Energy Plant WV-06").addTo(ol_wb);
-    L.marker(rc.unproject([1108,1807]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Lakeside Cabins").addTo(ol_wb);
-    L.marker(rc.unproject([638,2063]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Charleston Landfill").addTo(ol_wb);
-    L.marker(rc.unproject([592,2344]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Mount Blair").addTo(ol_wb);
-    L.marker(rc.unproject([2494,556]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Red Rocket Mega Stop").addTo(ol_wb);
-    L.marker(rc.unproject([1828,1143]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Monongah Power Plant").addTo(ol_wb);
-    L.marker(rc.unproject([1805,2380]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Spruce Knob").addTo(ol_wb);
-    L.marker(rc.unproject([1523,2731]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Federal Disposal Field HZ-21").addTo(ol_wb);
-    L.marker(rc.unproject([2892,925]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Thunder Mountain Power Plant").addTo(ol_wb);
-    L.marker(rc.unproject([2424,1415]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("Berkeley Springs").addTo(ol_wb);
+    L.marker(rc.unproject([1140,975]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Gorge Junkyard</b>").addTo(ol_wb);
+    L.marker(rc.unproject([892,1968]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Wade Airport</b>").addTo(ol_wb);
+    L.marker(rc.unproject([433,646]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Tyler County Dirt Track</b>").addTo(ol_wb);
+    L.marker(rc.unproject([1046,356]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Hemlock Holes</b>").addTo(ol_wb);
+    L.marker(rc.unproject([1661,712]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Grafton Steel Yard</b>").addTo(ol_wb);
+    L.marker(rc.unproject([617,1442]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Sunshine Meadows Industrial Farm</b>").addTo(ol_wb);
+    L.marker(rc.unproject([377,1699]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Billings Homestead</b>").addTo(ol_wb);
+    L.marker(rc.unproject([577,1931]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Poseidon Energy Plant WV-06</b>").addTo(ol_wb);
+    L.marker(rc.unproject([1108,1807]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Lakeside Cabins</b>").addTo(ol_wb);
+    L.marker(rc.unproject([638,2063]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Charleston Landfill</b>").addTo(ol_wb);
+    L.marker(rc.unproject([592,2344]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Mount Blair</b>").addTo(ol_wb);
+    L.marker(rc.unproject([2494,556]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Red Rocket Mega Stop</b>").addTo(ol_wb);
+    L.marker(rc.unproject([1828,1143]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Monongah Power Plant</b>").addTo(ol_wb);
+    L.marker(rc.unproject([1805,2380]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Spruce Knob</b>").addTo(ol_wb);
+    L.marker(rc.unproject([1523,2731]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Federal Disposal Field HZ-21</b>").addTo(ol_wb);
+    L.marker(rc.unproject([2892,925]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Thunder Mountain Power Plant</b>").addTo(ol_wb);
+    L.marker(rc.unproject([2424,1415]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: 'green', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Berkeley Springs</b>").addTo(ol_wb);
 
 
-    L.marker(rc.unproject([821,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Flatwoods Lookout").addTo(ol_loc);
-    L.marker(rc.unproject([1150,2078]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Torrance House").addTo(ol_loc);
-    L.marker(rc.unproject([1321,1598]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Tygart Water Treatment").addTo(ol_loc);
-    L.marker(rc.unproject([1299,1644]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Poseidon Power Substation PX-02").addTo(ol_loc);
-    L.marker(rc.unproject([1256,1750]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Summersville").addTo(ol_loc);
-    L.marker(rc.unproject([1060,1239]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Slocum Joe").addTo(ol_loc);
-    L.marker(rc.unproject([778,1045]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Moonshiner's Shack").addTo(ol_loc);
-    L.marker(rc.unproject([713,1368]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Relay Tower EM-B1-27").addTo(ol_loc);
-    L.marker(rc.unproject([795,1500]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Flatwood").addTo(ol_loc);
-    L.marker(rc.unproject([699,1505]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Vault-Tec Agricultural Research Center").addTo(ol_loc);
-    L.marker(rc.unproject([977,2044]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Summersville Dam").addTo(ol_loc);
-    L.marker(rc.unproject([1506,1991]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("The Whitespring Golf Club").addTo(ol_loc);
-    L.marker(rc.unproject([1633,1793]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("New Appalachian Central Trainyard").addTo(ol_loc);
-    L.marker(rc.unproject([1702,1691]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("98 NAR Regional").addTo(ol_loc);
-    L.marker(rc.unproject([1163,1993]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Sugarmaple").addTo(ol_loc);
-    L.marker(rc.unproject([1187,1960]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Overlook Cabin").addTo(ol_loc);
-    L.marker(rc.unproject([1013,1110]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Landview Lighthouse").addTo(ol_loc);
-    L.marker(rc.unproject([655,392]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Aaronholdt Homestead").addTo(ol_loc);
-    L.marker(rc.unproject([1035,2142]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Riverside Manor").addTo(ol_loc);
-    L.marker(rc.unproject([1406,1403]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Horizon's Rest").addTo(ol_loc);
-    L.marker(rc.unproject([925,118]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("The Crosshair").addTo(ol_loc);
-    L.marker(rc.unproject([964,1315]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Camp").addTo(ol_loc);
-    L.marker(rc.unproject([1121,1462]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Sutton").addTo(ol_loc);
-    L.marker(rc.unproject([502,468]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Darling Sister's Lab").addTo(ol_loc);
-    L.marker(rc.unproject([517,649]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Tyler County Fairgrounds").addTo(ol_loc);
-    L.marker(rc.unproject([1268,1258]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Arktos Pharma").addTo(ol_loc);
-    L.marker(rc.unproject([1244,1501]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("East Kanawha Lookout").addTo(ol_loc);
-    L.marker(rc.unproject([1233,1430]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Helvetia").addTo(ol_loc);
-    L.marker(rc.unproject([870,1226]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Wixon Homestead").addTo(ol_loc);
-    L.marker(rc.unproject([812,1165]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Gilman Lumber Mill").addTo(ol_loc);
-    L.marker(rc.unproject([910,1044]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Isolated Cabin").addTo(ol_loc);
-    L.marker(rc.unproject([942,927]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("North Kanawha Lookout").addTo(ol_loc);
-    L.marker(rc.unproject([1418,1316]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Greg's Mine Supply").addTo(ol_loc);
-    L.marker(rc.unproject([354,278]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("WV Lumber Co.").addTo(ol_loc);
-    L.marker(rc.unproject([335,1972]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Kanawha Nuka Cola Plant").addTo(ol_loc);
-    L.marker(rc.unproject([1299,238]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Wavy Willard's Water Park").addTo(ol_loc);
-    L.marker(rc.unproject([2153,2526]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Monorail Elevator").addTo(ol_loc);
-    L.marker(rc.unproject([807,2122]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Charleston Fire Department").addTo(ol_loc);
-    L.marker(rc.unproject([787,1970]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Hornwright Industrial Headquarters").addTo(ol_loc);
-    L.marker(rc.unproject([805,1977]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Charleston Herald").addTo(ol_loc);
-    L.marker(rc.unproject([781,2178]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Hornwright Air Purifier Site #01").addTo(ol_loc);
-    L.marker(rc.unproject([975,2208]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("Widow's Perch").addTo(ol_loc);
+    L.marker(rc.unproject([821,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Flatwoods Lookout</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1150,2078]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Torrance House</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1321,1598]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Tygart Water Treatment</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1299,1644]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Poseidon Power Substation PX-02</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1256,1750]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Summersville</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1060,1239]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Slocum Joe</b>").addTo(ol_loc);
+    L.marker(rc.unproject([778,1045]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Moonshiner's Shack</b>").addTo(ol_loc);
+    L.marker(rc.unproject([713,1368]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Relay Tower EM-B1-27</b>").addTo(ol_loc);
+    L.marker(rc.unproject([795,1500]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Flatwood</b>").addTo(ol_loc);
+    L.marker(rc.unproject([699,1505]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Vault-Tec Agricultural Research Center</b>").addTo(ol_loc);
+    L.marker(rc.unproject([977,2044]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Summersville Dam</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1506,1991]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>The Whitespring Golf Club</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1633,1793]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>New Appalachian Central Trainyard</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1702,1691]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>98 NAR Regional</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1163,1993]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Sugarmaple</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1187,1960]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Overlook Cabin</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1013,1110]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Landview Lighthouse</b>").addTo(ol_loc);
+    L.marker(rc.unproject([655,392]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Aaronholdt Homestead</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1035,2142]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Riverside Manor</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1406,1403]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Horizon's Rest</b>").addTo(ol_loc);
+    L.marker(rc.unproject([925,118]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>The Crosshair</b>").addTo(ol_loc);
+    L.marker(rc.unproject([964,1315]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Overseer's Camp</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1121,1462]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Sutton</b>").addTo(ol_loc);
+    L.marker(rc.unproject([502,468]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Darling Sister's Lab</b>").addTo(ol_loc);
+    L.marker(rc.unproject([517,649]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Tyler County Fairgrounds</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1268,1258]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Arktos Pharma</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1244,1501]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>East Kanawha Lookout</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1233,1430]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Helvetia</b>").addTo(ol_loc);
+    L.marker(rc.unproject([870,1226]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Wixon Homestead</b>").addTo(ol_loc);
+    L.marker(rc.unproject([812,1165]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Gilman Lumber Mill</b>").addTo(ol_loc);
+    L.marker(rc.unproject([910,1044]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Isolated Cabin</b>").addTo(ol_loc);
+    L.marker(rc.unproject([942,927]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>North Kanawha Lookout</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1418,1316]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Greg's Mine Supply</b>").addTo(ol_loc);
+    L.marker(rc.unproject([354,278]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>WV Lumber Co.</b>").addTo(ol_loc);
+    L.marker(rc.unproject([335,1972]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Kanawha Nuka Cola Plant</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1299,238]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Wavy Willard's Water Park</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2153,2526]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Monorail Elevator</b>").addTo(ol_loc);
+    L.marker(rc.unproject([807,2122]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Charleston Fire Department</b>").addTo(ol_loc);
+    L.marker(rc.unproject([787,1970]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Hornwright Industrial Headquarters</b>").addTo(ol_loc);
+    L.marker(rc.unproject([805,1977]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Charleston Herald</b>").addTo(ol_loc);
+    L.marker(rc.unproject([781,2178]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Hornwright Air Purifier Site #01</b>").addTo(ol_loc);
+    L.marker(rc.unproject([975,2208]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Widow's Perch</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1110,2429]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Lewisburg</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1049,2352]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Hornwright Air Purifier Site #02</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1162,2355]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Pleasant Hills Cemetery</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1129,1179]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: '#8D6645', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Gauley Mine</b>").addTo(ol_loc);
 
 
+    L.marker(rc.unproject([1108,1545]), {icon: L.AwesomeMarkers.icon({icon: mark_tr, prefix: 'fa', markerColor: 'purple', iconColor: 'grey', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Sutton Station</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1096,2469]), {icon: L.AwesomeMarkers.icon({icon: mark_tr, prefix: 'fa', markerColor: 'purple', iconColor: 'grey', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Lewisburg Station</b>").addTo(ol_loc);
 
-    L.marker(rc.unproject([1108,1545]), {icon: L.AwesomeMarkers.icon({icon: mark_tr, prefix: 'fa', markerColor: 'purple', iconColor: 'grey', extraClasses: 'fa-2x'}) }).bindTooltip("Sutton Station").addTo(ol_loc);
+    L.marker(rc.unproject([948,2032]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
+    L.marker(rc.unproject([1245,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
+    L.marker(rc.unproject([377,284]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
+    L.marker(rc.unproject([368,1983]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
+    L.marker(rc.unproject([1244,251]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
+    L.marker(rc.unproject([2137,2522]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
 
-
-    L.marker(rc.unproject([948,2032]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("Fusion Core").addTo(ol_pwr);
-    L.marker(rc.unproject([1245,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("Fusion Core").addTo(ol_pwr);
-    L.marker(rc.unproject([377,284]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("Fusion Core").addTo(ol_pwr);
-    L.marker(rc.unproject([368,1983]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("Fusion Core").addTo(ol_pwr);
-    L.marker(rc.unproject([1244,251]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("Fusion Core").addTo(ol_pwr);
-    L.marker(rc.unproject([2137,2522]), {icon: L.AwesomeMarkers.icon({icon: mark_fc, prefix: 'fa', markerColor: 'purple', iconColor: 'red', extraClasses: 'fa-2x'}) }).bindTooltip("Fusion Core").addTo(ol_pwr);
-
-    L.marker(rc.unproject([1442,1418]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead: Small Guns").addTo(ol_bob);
-    L.marker(rc.unproject([1434,1308]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead: Big Guns").addTo(ol_bob);
-    L.marker(rc.unproject([1268,251]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead: Energy Weapons<br>Bobblehead: Melee").addTo(ol_bob);
-    L.marker(rc.unproject([719,1471]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead: Intelligence<br>Bobblehead: Repair<br>Bobblehead: Science").addTo(ol_bob);
-    L.marker(rc.unproject([552,1930]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead: Leader").addTo(ol_bob);
-    L.marker(rc.unproject([496,634]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead: Agility").addTo(ol_bob);
-    L.marker(rc.unproject([496,634]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead: Agility").addTo(ol_bob);
-    L.marker(rc.unproject([778,1961]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("Bobblehead: Big Guns").addTo(ol_bob);
-
-    L.marker(rc.unproject([302,1163]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([611,2090]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 3)").addTo(ol_map);
-    L.marker(rc.unproject([1015,1187]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 5)").addTo(ol_map);
-    L.marker(rc.unproject([968,2218]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([1245,1109]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 8)").addTo(ol_map);
-    L.marker(rc.unproject([1236,1795]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 9)").addTo(ol_map);
-    L.marker(rc.unproject([1382,1336]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Forest (Map 10)").addTo(ol_map);
-    L.marker(rc.unproject([667,2649]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Ash Heap (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([850,2199]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Ash Heap (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([1010,556]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Toxic Valley (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([1326,468]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Toxic Valley (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([1586,663]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Toxic Valley (Map 3)").addTo(ol_map);
-    L.marker(rc.unproject([1719,276]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Toxic Valley (Map 4)").addTo(ol_map);
-    L.marker(rc.unproject([1466,2270]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Savage Divide (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([1642,1759]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Savage Divide (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([1767,1427]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Savage Divide (Map 3)").addTo(ol_map);
-    L.marker(rc.unproject([1796,1945]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Savage Divide (Map 5)").addTo(ol_map);
-    L.marker(rc.unproject([1929,418]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Savage Divide (Map 6)").addTo(ol_map);
-    L.marker(rc.unproject([1978,2535]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Savage Divide (Map 7)").addTo(ol_map);
-    L.marker(rc.unproject([1976,1427]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("Treasure Map - Savage Divide (Map 8)").addTo(ol_map);
+    L.marker(rc.unproject([1442,1418]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b> Small Guns").addTo(ol_bob);
+    L.marker(rc.unproject([1434,1308]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b> Big Guns").addTo(ol_bob);
+    L.marker(rc.unproject([1268,251]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b> Energy Weapons<br><b>Bobblehead:</b> Melee").addTo(ol_bob);
+    L.marker(rc.unproject([719,1471]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b> Intelligence<br><b>Bobblehead:</b> Repair<br><b>Bobblehead:</b> Science").addTo(ol_bob);
+    L.marker(rc.unproject([552,1930]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b> Leader").addTo(ol_bob);
+    L.marker(rc.unproject([496,634]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b> Agility").addTo(ol_bob);
+    L.marker(rc.unproject([496,634]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b> Agility").addTo(ol_bob);
+    L.marker(rc.unproject([778,1961]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b> Big Guns").addTo(ol_bob);
+    L.marker(rc.unproject([1012,1085]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b>").addTo(ol_bob);
+    L.marker(rc.unproject([1022,1105]), {icon: L.AwesomeMarkers.icon({icon: mark_bh, prefix: 'fa', markerColor: 'purple', iconColor: 'LightBlue', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Bobblehead:</b>").addTo(ol_bob);
 
 
-    L.marker(rc.unproject([1604,817]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Grognak & The Ruby Ruins").addTo(ol_tape);
-    L.marker(rc.unproject([815,950]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Nuka Tapper<br>Overseer's Log - Vault 76").addTo(ol_tape);
-    L.marker(rc.unproject([973,1308]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - C.A.M.P.").addTo(ol_tape);
-    L.marker(rc.unproject([786,1466]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - Flatwoods").addTo(ol_tape);
-    L.marker(rc.unproject([797,2112]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Log - Firehouse").addTo(ol_tape);
-    L.marker(rc.unproject([699,1477]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Journal - Entry 1").addTo(ol_tape);
-    L.marker(rc.unproject([1131,1460]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Overseer's Journal - Entry 2").addTo(ol_tape);
-    L.marker(rc.unproject([1283,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("Test Log 9-23-77-A10<br>Test Log 3-12-78-A14").addTo(ol_tape);
+    L.marker(rc.unproject([302,1163]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Forest (Map 1)").addTo(ol_map);
+    L.marker(rc.unproject([611,2090]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Forest (Map 3)").addTo(ol_map);
+    L.marker(rc.unproject([1015,1187]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Forest (Map 5)").addTo(ol_map);
+    L.marker(rc.unproject([968,2218]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Forest (Map 2)").addTo(ol_map);
+    L.marker(rc.unproject([1245,1109]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Forest (Map 8)").addTo(ol_map);
+    L.marker(rc.unproject([1236,1795]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Forest (Map 9)").addTo(ol_map);
+    L.marker(rc.unproject([1382,1336]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Forest (Map 10)").addTo(ol_map);
+    L.marker(rc.unproject([667,2649]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Ash Heap (Map 1)").addTo(ol_map);
+    L.marker(rc.unproject([850,2199]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Ash Heap (Map 2)").addTo(ol_map);
+    L.marker(rc.unproject([1010,556]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Toxic Valley (Map 1)").addTo(ol_map);
+    L.marker(rc.unproject([1326,468]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Toxic Valley (Map 2)").addTo(ol_map);
+    L.marker(rc.unproject([1586,663]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Toxic Valley (Map 3)").addTo(ol_map);
+    L.marker(rc.unproject([1719,276]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Toxic Valley (Map 4)").addTo(ol_map);
+    L.marker(rc.unproject([1466,2270]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Savage Divide (Map 1)").addTo(ol_map);
+    L.marker(rc.unproject([1642,1759]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Savage Divide (Map 2)").addTo(ol_map);
+    L.marker(rc.unproject([1767,1427]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Savage Divide (Map 3)").addTo(ol_map);
+    L.marker(rc.unproject([1796,1945]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Savage Divide (Map 5)").addTo(ol_map);
+    L.marker(rc.unproject([1929,418]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Savage Divide (Map 6)").addTo(ol_map);
+    L.marker(rc.unproject([1978,2535]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Savage Divide (Map 7)").addTo(ol_map);
+    L.marker(rc.unproject([1976,1427]), {icon: L.AwesomeMarkers.icon({icon: mark_tm, prefix: 'fa', markerColor: 'purple', iconColor: 'orange', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Treasure Map:</b> Savage Divide (Map 8)").addTo(ol_map);
 
-    L.marker(rc.unproject([778,1498]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Delbert's Sunshine Oil").addTo(ol_rep);
-    L.marker(rc.unproject([514,448]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Delbert's Corn Pone").addTo(ol_rep);
-    L.marker(rc.unproject([476,628]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Swamp Tofu Soup").addTo(ol_rep);
-    L.marker(rc.unproject([1425,1421]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Silt Bean Puree").addTo(ol_rep);
-    L.marker(rc.unproject([1263,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Plan: Tinker's Workbench<br>Recipe: Glowing Fungus Puree").addTo(ol_rep);
-    L.marker(rc.unproject([776,1966]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Yao Guai Roast").addTo(ol_rep);
-    L.marker(rc.unproject([836,2054]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Bloatfly Loaf").addTo(ol_rep);
-    L.marker(rc.unproject([779,2195]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("Recipe: Steeped Ash Rose Tea").addTo(ol_rep);
+
+    L.marker(rc.unproject([1604,817]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Holotape Game:</b> Grognak & The Ruby Ruins").addTo(ol_tape);
+    L.marker(rc.unproject([815,950]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Holotape Game:</b> Nuka Tapper<br><b>Overseer's Log:</b> Vault 76").addTo(ol_tape);
+    L.marker(rc.unproject([973,1308]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Overseer's Log:</b> C.A.M.P.").addTo(ol_tape);
+    L.marker(rc.unproject([786,1466]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Overseer's Log:</b> Flatwoods").addTo(ol_tape);
+    L.marker(rc.unproject([797,2112]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Overseer's Log:</b> Firehouse").addTo(ol_tape);
+    L.marker(rc.unproject([699,1477]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Overseer's Journal:</b> Entry 1").addTo(ol_tape);
+    L.marker(rc.unproject([1131,1460]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Overseer's Journal:</b> Entry 2").addTo(ol_tape);
+    L.marker(rc.unproject([1283,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_tp, prefix: 'fa', markerColor: 'purple', iconColor: 'purple', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Test Log:</b> 9-23-77-A10<br><b>Test Log:</b> 3-12-78-A14").addTo(ol_tape);
+
+    L.marker(rc.unproject([778,1498]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Recipe:</b> Delbert's Sunshine Oil").addTo(ol_rep);
+    L.marker(rc.unproject([514,448]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Recipe:</b> Delbert's Corn Pone").addTo(ol_rep);
+    L.marker(rc.unproject([476,628]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Recipe:</b> Swamp Tofu Soup").addTo(ol_rep);
+    L.marker(rc.unproject([1425,1421]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Recipe:</b> Silt Bean Puree").addTo(ol_rep);
+    L.marker(rc.unproject([1263,1272]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Plan:</b> Tinker's Workbench<br><b>Recipe:</b> Glowing Fungus Puree").addTo(ol_rep);
+    L.marker(rc.unproject([776,1966]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Recipe:</b> Yao Guai Roast").addTo(ol_rep);
+    L.marker(rc.unproject([836,2054]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Recipe:</b> Bloatfly Loaf").addTo(ol_rep);
+    L.marker(rc.unproject([779,2195]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: 'white', extraClasses: 'fa-2x'}) }).bindTooltip("<b>Recipe:</b> Steeped Ash Rose Tea").addTo(ol_rep);
 
 
 //Let's do our layer filters
@@ -197,16 +203,16 @@ var baseMaps = {
 	"Base": baselayer
 };
 var overlays = {
-	"Power Armor": ol_pa,
-	"Vault": ol_vault,
-	"Location": ol_loc,
-	"Train Station": ol_train,
-	"Fusion Core": ol_pwr,
 	"Bobblehead": ol_bob,
-	"Magazine": ol_mag,
+	"Fusion Core": ol_pwr,
 	"Holotape": ol_tape,
-	"Recipe": ol_rep,
+	"Location": ol_loc,
+	"Magazine": ol_mag,
+	"Power Armor": ol_pa,
+	"Recipe/Plan": ol_rep,
+	"Train Station": ol_train,
 	"Treasure Map": ol_map,
+	"Vault": ol_vault,
 	"Workshop": ol_wb,
 };
 
