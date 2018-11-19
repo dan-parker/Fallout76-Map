@@ -56,7 +56,7 @@ var mark_ma = 'book-open';	//Magazine
 var mark_tm = 'map';		//Treasure Map
 var mark_tp = 'tape';		//Holo tape
 var mark_rp = 'receipt';	//Receipt
-var mark_ri = 'signature';	//Rift
+var mark_ri = 'signature';	//Fissure
 
 //Let's set our icon colors, single place to swap them...
 var color_po = 'steelblue'; 	//Power Armor
@@ -70,7 +70,7 @@ var color_ma = 'LightBlue';	//Magazine
 var color_tm = 'orange';	//Treasure Map
 var color_tp = 'purple';	//Holo tape
 var color_rp = 'white';		//Receipt
-var color_ri = 'HotPink';	//Rift
+var color_ri = 'HotPink';	//Fissure
 
 
     L.marker(rc.unproject([931,1914]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: color_po, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
@@ -327,7 +327,7 @@ var overlays = {
 	"Treasure Map": ol_map,
 	"Vault": ol_vault,
 	"Workshop": ol_wb,
-	"Rift": ol_rift,
+	"Fissure": ol_rift,
 };
 
 L.control.layers(null, overlays).addTo(map);
