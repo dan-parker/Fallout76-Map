@@ -9,6 +9,7 @@ var ol_map = L.layerGroup();
 var ol_tape = L.layerGroup();
 var ol_rep = L.layerGroup();
 var ol_wb = L.layerGroup();
+var ol_rift = L.layerGroup();
 
 // the tile layer containing the image generated with `gdal2tiles --leaflet -p raster -w none <img> tiles`
 var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
@@ -18,7 +19,7 @@ var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
 
 // create the map
 var map = L.map('mapid', {
-  layers: [baselayer, ol_pa, ol_vault, ol_loc,ol_train,ol_pwr,ol_bob,ol_mag,ol_map,ol_tape,ol_rep,ol_wb],
+  layers: [baselayer, ol_pa, ol_vault, ol_loc,ol_train,ol_pwr,ol_bob,ol_mag,ol_map,ol_tape,ol_rep,ol_wb,ol_rift],
   fullscreenControl: true,
   fullscreenControlOptions: {
     position: 'topleft'
@@ -55,6 +56,7 @@ var mark_ma = 'book-open';	//Magazine
 var mark_tm = 'map';		//Treasure Map
 var mark_tp = 'tape';		//Holo tape
 var mark_rp = 'receipt';	//Receipt
+var mark_ri = 'signature';	//Rift
 
 //Let's set our icon colors, single place to swap them...
 var color_po = 'steelblue'; 	//Power Armor
@@ -68,7 +70,7 @@ var color_ma = 'LightBlue';	//Magazine
 var color_tm = 'orange';	//Treasure Map
 var color_tp = 'purple';	//Holo tape
 var color_rp = 'white';		//Receipt
-
+var color_ri = 'HotPink';	//Rift
 
 
     L.marker(rc.unproject([931,1914]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: color_po, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
@@ -295,6 +297,20 @@ var color_rp = 'white';		//Receipt
     L.marker(rc.unproject([779,2195]), {icon: L.AwesomeMarkers.icon({icon: mark_rp, prefix: 'fa', markerColor: 'purple', iconColor: color_rp, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Recipe:</b> Steeped Ash Rose Tea").addTo(ol_rep);
 
 
+//Rift
+    L.marker(rc.unproject([2318,742]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2615,355]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2438,1112]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2603,2107]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2891,2804]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2764,2767]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([1953,2701]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([1260,2122]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([699,2774]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+
+
+
+
 //Let's do our layer filters
 var baseMaps = {
 	"Base": baselayer
@@ -311,6 +327,7 @@ var overlays = {
 	"Treasure Map": ol_map,
 	"Vault": ol_vault,
 	"Workshop": ol_wb,
+	"Rift": ol_rift,
 };
 
 L.control.layers(null, overlays).addTo(map);
