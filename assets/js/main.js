@@ -95,6 +95,7 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([1377,448]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: color_po, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
     L.marker(rc.unproject([1565,328]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: color_po, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
     L.marker(rc.unproject([1758,228]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: color_po, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
+    L.marker(rc.unproject([2283,341]), {icon: L.AwesomeMarkers.icon({icon: mark_po, prefix: 'fa', markerColor: 'purple', iconColor: color_po, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Power Armor</b>").addTo(ol_pa);
 
 
 
@@ -119,6 +120,11 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([1523,2731]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: color_wr, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Federal Disposal Field HZ-21</b>").addTo(ol_wb);
     L.marker(rc.unproject([2892,925]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: color_wr, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Thunder Mountain Power Plant</b>").addTo(ol_wb);
     L.marker(rc.unproject([2424,1415]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: color_wr, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Berkeley Springs</b>").addTo(ol_wb);
+    L.marker(rc.unproject([2302,353]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: color_wr, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Converted Munitions Factory</b>").addTo(ol_wb);
+    L.marker(rc.unproject([2860,1797]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: color_wr, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Dabney Homestead</b>").addTo(ol_wb);
+    L.marker(rc.unproject([2609,1107]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: color_wr, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Dolly Sods Campground</b>").addTo(ol_wb);
+    L.marker(rc.unproject([2800,2285]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: color_wr, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Abandoned Bog Town</b>").addTo(ol_wb);
+    L.marker(rc.unproject([204,2552]), {icon: L.AwesomeMarkers.icon({icon: mark_wr, prefix: 'fa', markerColor: 'purple', iconColor: color_wr, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Beckley Mine Exhibit</b>").addTo(ol_wb);
 
 
 //The Forest
