@@ -304,15 +304,15 @@ var color_ri = 'HotPink';	//Fissure
 
 
 //Rift
-    L.marker(rc.unproject([2318,742]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
-    L.marker(rc.unproject([2615,355]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
-    L.marker(rc.unproject([2438,1112]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
-    L.marker(rc.unproject([2603,2107]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
-    L.marker(rc.unproject([2891,2804]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
-    L.marker(rc.unproject([2764,2767]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
-    L.marker(rc.unproject([1953,2701]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
-    L.marker(rc.unproject([1260,2122]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
-    L.marker(rc.unproject([699,2774]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Rift</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2318,742]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2615,355]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2438,1112]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2603,2107]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2891,2804]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2764,2767]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([1953,2701]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([1260,2122]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([699,2774]), {icon: L.AwesomeMarkers.icon({icon: mark_ri, prefix: 'fa', markerColor: 'purple', iconColor: color_ri, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
 
 
 
