@@ -116,7 +116,25 @@ i.fa {
 
 i.icon-white {color: white;}
 
+.mark_tr {
+	filter: invert(.5) sepia(1) saturate(.5) hue-rotate(140deg) drop-shadow(2px 2px 2px black);
+}
+.mark_wr {
+	filter: /*invert(.5) sepia(1) saturate(3) hue-rotate(100deg)*/ drop-shadow(2px 2px 1px black);
+}
+.mark_va {
+	filter: invert(.5) sepia(1) saturate(3) hue-rotate(5deg) drop-shadow(2px 2px 2px black);
+}
+.mark_bh {
+	filter: /*invert(.5) sepia(1) saturate(4) hue-rotate(140deg)*/ drop-shadow(2px 2px 1px black);
+}
 
+.svgmarker {
+  opacity: 0.7;
+}
+.svgmarker:hover {
+  opacity: 1.0;
+}
 
  /* ==========================================================================
    Helper classes
