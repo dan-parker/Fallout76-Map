@@ -413,15 +413,15 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([2378,2520]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: color_lo, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Appalachian Antiques</b>").addTo(ol_loc);
 
 //Train Stations
-    L.marker(rc.unproject([725,1901]), {icon: mark_tr}).bindTooltip("<b>Charleston Station</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1337,950]), {icon: mark_tr}).bindTooltip("<b>Morgantown Station</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1108,1545]), {icon: mark_tr}).bindTooltip("<b>Sutton Station</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1096,2450]), {icon: mark_tr}).bindTooltip("<b>Lewisburg Station</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1103,630]), {icon: mark_tr}).bindTooltip("<b>Grafton Station</b>").addTo(ol_loc);
-    L.marker(rc.unproject([482,2547]), {icon: mark_tr}).bindTooltip("<b>Welch Station</b>").addTo(ol_loc);
-    L.marker(rc.unproject([2043,718]), {icon: mark_tr}).bindTooltip("<b>Sunnytop Station</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1865,1570]), {icon: mark_tr}).bindTooltip("<b>Pleasant Valley Station</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1657,1945]), {icon: mark_tr}).bindTooltip("<b>Whitespring Station</b>").addTo(ol_loc);
+    L.marker(rc.unproject([725,1901]), {icon: mark_tr}).bindTooltip("<b>Charleston Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([1337,950]), {icon: mark_tr}).bindTooltip("<b>Morgantown Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([1108,1545]), {icon: mark_tr}).bindTooltip("<b>Sutton Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([1096,2450]), {icon: mark_tr}).bindTooltip("<b>Lewisburg Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([1103,630]), {icon: mark_tr}).bindTooltip("<b>Grafton Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([482,2547]), {icon: mark_tr}).bindTooltip("<b>Welch Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([2043,718]), {icon: mark_tr}).bindTooltip("<b>Sunnytop Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([1865,1570]), {icon: mark_tr}).bindTooltip("<b>Pleasant Valley Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([1657,1945]), {icon: mark_tr}).bindTooltip("<b>Whitespring Station</b>").addTo(ol_train);
 
 //Fusion Core
     L.marker(rc.unproject([948,2032]), {icon: mark_fcore, title: "Fusion Core", riseOnHover: true}).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
