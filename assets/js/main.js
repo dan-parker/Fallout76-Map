@@ -122,6 +122,7 @@ var mark_observatory = L.icon({ iconUrl: './assets/icon/observatory.svg', iconSi
 var mark_top = L.icon({ iconUrl: './assets/icon/top.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 			//Top of the World
 var mark_rocks = L.icon({ iconUrl: './assets/icon/rocks.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Rocks
 var mark_resort = L.icon({ iconUrl: './assets/icon/resort.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Resort
+var mark_dish = L.icon({ iconUrl: './assets/icon/dish.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Dish
 
 //Let's set our icon colors, single place to swap them...
 var color_po = 'steelblue'; 	//Power Armor
@@ -405,6 +406,28 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([1598,2035]), {icon: mark_lodge, title: "Whitespring Service Entrance", riseOnHover: true}).bindTooltip("<b>Whitespring Service Entrance</b>").addTo(ol_loc);
     L.marker(rc.unproject([1571,2086]), {icon: mark_bunker, title: "Whitespring Bunker", riseOnHover: true}).bindTooltip("<b>Whitespring Bunker</b>").addTo(ol_loc);
 //
+    L.marker(rc.unproject([1693,2055]), {icon: mark_substation, title: "Monongah Power Substation MZ-02", riseOnHover: true}).bindTooltip("<b>Monongah Power Substation MZ-02</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1704,1956]), {icon: mark_mine, title: "Blackwater Mine", riseOnHover: true}).bindTooltip("<b>Blackwater Mine</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1848,1906]), {icon: mark_cabin, title: "Middle Mountain Cabins", riseOnHover: true}).bindTooltip("<b>Middle Mountain Cabins</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1924,2007]), {icon: mark_disposal, title: "Emmett Mountain Disposal Site", riseOnHover: true}).bindTooltip("<b>Emmett Mountain Disposal Site</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2051,2099]), {icon: mark_raider, title: "Ripper Alley", riseOnHover: true}).bindTooltip("<b>Ripper Alley</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2147,1904]), {icon: mark_dish, title: "National Isolated Radio Array", riseOnHover: true}).bindTooltip("<b>National Isolated Radio Array</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2367,1745]), {icon: mark_dish, title: "Sugar Grove", riseOnHover: true}).bindTooltip("<b>Sugar Grove</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2281,1966]), {icon: mark_dish, title: "National Radio Astronomy Research Center", riseOnHover: true}).bindTooltip("<b>National Radio Astronomy Research Center</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2151,2057]), {icon: mark_scraper, title: "West Tek Research Center", riseOnHover: true}).bindTooltip("<b>West Tek Research Center</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2231,2044]), {icon: mark_base, title: "US-13C Bivouac", riseOnHover: true}).bindTooltip("<b>US-13C Bivouac</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2346,2057]), {icon: mark_lookout, title: "East Mountain Lookout", riseOnHover: true}).bindTooltip("<b>East Mountain Lookout</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1600,2325]), {icon: mark_shack, title: "Mountainside Bed & Breakfast", riseOnHover: true}).bindTooltip("<b>Mountainside Bed & Breakfast</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1675,2127]), {icon: mark_perch, title: "The Vantage", riseOnHover: true}).bindTooltip("<b>The Vantage</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1807,2090]), {icon: mark_pond, title: "Solomon's Pond", riseOnHover: true}).bindTooltip("<b>Solomon's Pond</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1869,2174]), {icon: mark_pond, title: "Twin Lakes", riseOnHover: true}).bindTooltip("<b>Twin Lakes</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1923,2116]), {icon: mark_cabin, title: "Investigator's Cabin", riseOnHover: true}).bindTooltip("<b>Investigator's Cabin</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1968,2279]), {icon: mark_town, title: "Huntersville", riseOnHover: true}).bindTooltip("<b>Huntersville</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2109,2258]), {icon: mark_rocks, title: "Devil's Backbone", riseOnHover: true}).bindTooltip("<b>Devil's Backbone</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2121,2336]), {icon: mark_raider, title: "The Freak Show", riseOnHover: true}).bindTooltip("<b>The Freak Show</b>").addTo(ol_loc);
+
+
+
 
 
     L.marker(rc.unproject([2153,2526]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: color_lo, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Monorail Elevator</b>").addTo(ol_loc);
