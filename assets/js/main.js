@@ -123,6 +123,7 @@ var mark_top = L.icon({ iconUrl: './assets/icon/top.svg', iconSize: [32,32], cla
 var mark_rocks = L.icon({ iconUrl: './assets/icon/rocks.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Rocks
 var mark_resort = L.icon({ iconUrl: './assets/icon/resort.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Resort
 var mark_dish = L.icon({ iconUrl: './assets/icon/dish.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Dish
+var mark_monorail = L.icon({ iconUrl: './assets/icon/monorail.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Monorail
 
 //Let's set our icon colors, single place to swap them...
 var color_po = 'steelblue'; 	//Power Armor
@@ -425,12 +426,20 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([1968,2279]), {icon: mark_town, title: "Huntersville", riseOnHover: true}).bindTooltip("<b>Huntersville</b>").addTo(ol_loc);
     L.marker(rc.unproject([2109,2258]), {icon: mark_rocks, title: "Devil's Backbone", riseOnHover: true}).bindTooltip("<b>Devil's Backbone</b>").addTo(ol_loc);
     L.marker(rc.unproject([2121,2336]), {icon: mark_raider, title: "The Freak Show", riseOnHover: true}).bindTooltip("<b>The Freak Show</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1548,2432]), {icon: mark_base, title: "Site Charlie", riseOnHover: true}).bindTooltip("<b>Site Charlie</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1550,2462]), {icon: mark_waterplant, title: "R&G Processing Services", riseOnHover: true}).bindTooltip("<b>R&G Processing Services</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1720,2545]), {icon: mark_pond, title: "Spruce Knob Channels", riseOnHover: true}).bindTooltip("<b>Spruce Knob Channels</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1768,2494]), {icon: mark_pond, title: "Spruce Knob Lake", riseOnHover: true}).bindTooltip("<b>Spruce Knob Lake</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1809,2437]), {icon: mark_tree, title: "Spruce Knob Campground", riseOnHover: true}).bindTooltip("<b>Spruce Knob Campground</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2153,2526]), {icon: mark_monorail, title: "Monorail Elevator", riseOnHover: true}).bindTooltip("<b>Monorail Elevator</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2147,2606]), {icon: mark_mine, title: "Lucky Hole Mine", riseOnHover: true}).bindTooltip("<b>Lucky Hole Mine</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1340,2822]), {icon: mark_hotdog, title: "Dent & Sons Construction", riseOnHover: true}).bindTooltip("<b>Dent & Sons Construction</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1429,2651]), {icon: mark_perch, title: "Scenic Overlook", riseOnHover: true}).bindTooltip("<b>Scenic Overlook</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1886,2743]), {icon: mark_pond, title: "Lake Eloise", riseOnHover: true}).bindTooltip("<b>Lake Eloise</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2081,2764]), {icon: mark_radiotower, title: "Relay Tower EL-B1-02", riseOnHover: true}).bindTooltip("<b>Relay Tower EL-B1-02</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2058,2896]), {icon: mark_cabin, title: "Johnson's Acre", riseOnHover: true}).bindTooltip("<b>Johnson's Acre</b>").addTo(ol_loc);
+//The Mire
 
-
-
-
-
-    L.marker(rc.unproject([2153,2526]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: color_lo, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Monorail Elevator</b>").addTo(ol_loc);
 
     L.marker(rc.unproject([2260,2561]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: color_lo, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Fort Defiance</b>").addTo(ol_loc);
     L.marker(rc.unproject([2378,2520]), {icon: L.AwesomeMarkers.icon({icon: mark_lo, prefix: 'fa', markerColor: 'purple', iconColor: color_lo, extraClasses: 'fa-2x'}) }).bindTooltip("<b>Appalachian Antiques</b>").addTo(ol_loc);
@@ -445,6 +454,7 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([2043,718]), {icon: mark_tr}).bindTooltip("<b>Sunnytop Station</b>").addTo(ol_train);
     L.marker(rc.unproject([1865,1570]), {icon: mark_tr}).bindTooltip("<b>Pleasant Valley Station</b>").addTo(ol_train);
     L.marker(rc.unproject([1657,1945]), {icon: mark_tr}).bindTooltip("<b>Whitespring Station</b>").addTo(ol_train);
+    L.marker(rc.unproject([1575,2577]), {icon: mark_tr}).bindTooltip("<b>R&G Station</b>").addTo(ol_train);
 
 //Fusion Core
     L.marker(rc.unproject([948,2032]), {icon: mark_fcore, title: "Fusion Core", riseOnHover: true}).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
