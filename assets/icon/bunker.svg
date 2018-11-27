@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="11.95px" width="20.2px" xmlns="http://www.w3.org/2000/svg">
-  <g transform="matrix(1.0, 0.0, 0.0, 1.0, 10.1, 5.95)">
-    <path d="M-1.15 -3.45 L-6.95 -3.45 -6.95 -1.55 -1.15 -1.55 -1.15 -3.45 M8.55 -4.9 L8.95 -3.9 9.45 5.35 6.4 5.35 6.4 2.8 4.75 2.8 4.75 5.35 -9.45 5.35 -9.0 -3.9 -8.55 -4.9 Q-8.2 -5.3 -7.6 -5.3 L7.55 -5.3 Q8.1 -5.3 8.55 -4.9 M6.7 -3.45 L0.9 -3.45 0.9 -1.55 6.7 -1.55 6.7 -3.45" fill="#ffffcb" fill-rule="evenodd" stroke="none"/>
-    <path d="M6.7 -3.45 L6.7 -1.55 0.9 -1.55 0.9 -3.45 6.7 -3.45 M8.55 -4.9 Q8.1 -5.3 7.55 -5.3 L-7.6 -5.3 Q-8.2 -5.3 -8.55 -4.9 L-9.0 -3.9 -9.45 5.35 4.75 5.35 4.75 2.8 6.4 2.8 6.4 5.35 9.45 5.35 8.95 -3.9 8.55 -4.9 M-1.15 -3.45 L-1.15 -1.55 -6.95 -1.55 -6.95 -3.45 -1.15 -3.45" fill="none" stroke="#f5cb5b" stroke-linecap="square" stroke-linejoin="round" stroke-opacity="0.29803923" stroke-width="1.0"/>
-  </g>
-</svg>
+<svg height="11.95" width="20.2" xmlns="http://www.w3.org/2000/svg"><path d="M8.95 2.5h-5.8v1.9h5.8V2.5m9.7-1.45l.4 1 .5 9.25H16.5V8.75h-1.65v2.55H.65l.45-9.25.45-1q.35-.4.95-.4h15.15q.55 0 1 .4M16.8 2.5H11v1.9h5.8V2.5" fill="#ffffcb" fill-rule="evenodd"/><path d="M16.8 2.5v1.9H11V2.5h5.8m1.85-1.45q-.45-.4-1-.4H2.5q-.6 0-.95.4l-.45 1-.45 9.25h14.2V8.75h1.65v2.55h3.05l-.5-9.25-.4-1M8.95 2.5v1.9h-5.8V2.5h5.8" fill="none" stroke="#f5cb5b" stroke-linecap="square" stroke-linejoin="round" stroke-opacity=".298"/></svg>
