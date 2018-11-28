@@ -23,7 +23,8 @@ var map = L.map('mapid', {
   fullscreenControl: true,
   fullscreenControlOptions: {
     position: 'topleft'
-  }
+  },
+  renderer: L.canvas()
 });
 
 
