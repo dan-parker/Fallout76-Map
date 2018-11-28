@@ -23,7 +23,8 @@ var map = L.map('mapid', {
   fullscreenControl: true,
   fullscreenControlOptions: {
     position: 'topleft'
-  }
+  },
+  renderer: L.canvas()
 });
 
 
@@ -58,6 +59,7 @@ var mark_va76 = L.icon({ iconUrl: './assets/icon/vault76.svg', iconSize: [32,32]
 var mark_va63 = L.icon({ iconUrl: './assets/icon/vault63.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault63
 var mark_va94 = L.icon({ iconUrl: './assets/icon/vault94.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault94
 var mark_va96 = L.icon({ iconUrl: './assets/icon/vault96.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault96
+var mark_map = L.icon({ iconUrl: './assets/icon/vault96.svg', iconSize: [32,32], className:'mark_tm svgmarker'}); 	//Treasure Map
 var mark_bh = L.icon({ iconUrl: './assets/icon/bhead.svg', iconSize: [32,32], className:'mark_bh svgmarker'}); 		//Bobblehead
 var mark_tape = L.icon({ iconUrl: './assets/icon/holotape.svg', iconSize: [32,32], className:'mark_tape svgmarker'}); 	//Holotape
 var mark_fcore = L.icon({ iconUrl: './assets/icon/fcore.svg', iconSize: [32,32], className:'mark_fcore svgmarker'}); 	//Fusion Core
