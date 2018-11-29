@@ -533,17 +533,17 @@ var color_ri = 'HotPink';	//Fissure
 
 
 //Train Stations
-    L.marker(rc.unproject([725,1901]), {icon: mark_tr}).bindTooltip("<b>Charleston Station (Responders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([1337,950]), {icon: mark_tr}).bindTooltip("<b>Morgantown Station (Responders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([1108,1545]), {icon: mark_tr}).bindTooltip("<b>Sutton Station (Raiders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([1096,2450]), {icon: mark_tr}).bindTooltip("<b>Lewisburg Station (Responders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([1103,630]), {icon: mark_tr}).bindTooltip("<b>Grafton Station (Responders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([482,2547]), {icon: mark_tr}).bindTooltip("<b>Welch Station (Responders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([2043,718]), {icon: mark_tr}).bindTooltip("<b>Sunnytop Station (Raiders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([1865,1570]), {icon: mark_tr}).bindTooltip("<b>Pleasant Valley Station (Raiders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([1657,1945]), {icon: mark_tr}).bindTooltip("<b>Whitespring Station (Whitespring)</b>").addTo(ol_train);
-    L.marker(rc.unproject([1575,2577]), {icon: mark_tr}).bindTooltip("<b>R&G Station (Raiders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([2583,2693]), {icon: mark_tr}).bindTooltip("<b>Watoga Station (Unique)</b>").addTo(ol_train);
+    L.marker(rc.unproject([725,1901]), {icon: mark_tr, title: "Charleston Station (Responders)", riseOnHover: true}).bindTooltip("<b>Charleston Station (Responders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([1337,950]), {icon: mark_tr, title: "Morgantown Station (Responders)", riseOnHover: true}).bindTooltip("<b>Morgantown Station (Responders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([1108,1545]), {icon: mark_tr, title: "Sutton Station (Raiders)", riseOnHover: true}).bindTooltip("<b>Sutton Station (Raiders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([1096,2450]), {icon: mark_tr, title: "Lewisburg Station (Responders)", riseOnHover: true}).bindTooltip("<b>Lewisburg Station (Responders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([1103,630]), {icon: mark_tr, title: "Grafton Station (Responders)", riseOnHover: true}).bindTooltip("<b>Grafton Station (Responders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([482,2547]), {icon: mark_tr, title: "Welch Station (Responders)", riseOnHover: true}).bindTooltip("<b>Welch Station (Responders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([2043,718]), {icon: mark_tr, title: "Sunnytop Station (Raiders)", riseOnHover: true}).bindTooltip("<b>Sunnytop Station (Raiders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([1865,1570]), {icon: mark_tr, title: "Pleasant Valley Station (Raiders)", riseOnHover: true}).bindTooltip("<b>Pleasant Valley Station (Raiders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([1657,1945]), {icon: mark_tr, title: "Whitespring Station (Whitespring)", riseOnHover: true}).bindTooltip("<b>Whitespring Station (Whitespring)</b>").addTo(ol_train);
+    L.marker(rc.unproject([1575,2577]), {icon: mark_tr, title: "R&G Station (Raiders)", riseOnHover: true}).bindTooltip("<b>R&G Station (Raiders)</b>").addTo(ol_train);
+    L.marker(rc.unproject([2583,2693]), {icon: mark_tr, title: "Watoga Station (Unique)", riseOnHover: true}).bindTooltip("<b>Watoga Station (Unique)</b>").addTo(ol_train);
 
 //Fusion Core
     L.marker(rc.unproject([948,2032]), {icon: mark_fcore, title: "Fusion Core", riseOnHover: true}).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
