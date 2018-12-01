@@ -141,13 +141,13 @@ var color_ri = 'HotPink';	//Fissure
 
 
     L.marker(rc.unproject([931,1914]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Wade Airport</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1632,1799]), {icon: mark_parmor, title: 'Power Armor2', riseOnHover: true}).bindTooltip("<b>Power Armor2</b>").addTo(ol_pa);
+    L.marker(rc.unproject([1617,1791]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>New Appalachian Central Trainyard</b>").addTo(ol_pa);
     L.marker(rc.unproject([673,414]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Aaronholdt Homestead</b>").addTo(ol_pa);
     L.marker(rc.unproject([918,118]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>The Crosshair</b>").addTo(ol_pa);
-    L.marker(rc.unproject([358,296]), {icon: mark_parmor, title: 'Power Armor5', riseOnHover: true}).bindTooltip("<b>Power Armor5</b>").addTo(ol_pa);
+    L.marker(rc.unproject([358,296]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>WV Lumber Co.</b>").addTo(ol_pa);
     L.marker(rc.unproject([391,2001]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Kanawha Nuka Cola Plant</b>").addTo(ol_pa);
     L.marker(rc.unproject([304,1133]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Point Pleasant</b><br>x2").addTo(ol_pa);
-    L.marker(rc.unproject([469,853]), {icon: mark_parmor, title: 'Power Armor8', riseOnHover: true}).bindTooltip("<b>Power Armor8</b>").addTo(ol_pa);
+    L.marker(rc.unproject([469,853]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Black Mountain Ordnance Works</b>").addTo(ol_pa);
     L.marker(rc.unproject([1154,945]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Gorge Junkyard</b>").addTo(ol_pa);
     L.marker(rc.unproject([1300,1024]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Morgantown Trainyard</b>").addTo(ol_pa);
     L.marker(rc.unproject([1403,1069]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Mama Dolce's Food Processing</b><br>x2").addTo(ol_pa);
@@ -161,7 +161,7 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([780,1974]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Hornwright Industrial Headquarters</b>").addTo(ol_pa);
     L.marker(rc.unproject([1326,724]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Eastern Regional Penitentiary</b>").addTo(ol_pa);
     L.marker(rc.unproject([1377,448]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Clarksburg</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1565,328]), {icon: mark_parmor, title: 'Power Armork', riseOnHover: true}).bindTooltip("<b>Power Armorcc</b>").addTo(ol_pa);
+    L.marker(rc.unproject([1565,328]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Black Bear Lodge</b>").addTo(ol_pa);
     L.marker(rc.unproject([1702,225]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Crashed Space Station</b>").addTo(ol_pa);
     L.marker(rc.unproject([2283,341]), {icon: mark_parmor, title: 'Power Armorm', riseOnHover: true}).bindTooltip("<b>Power Armorii</b>").addTo(ol_pa);
     L.marker(rc.unproject([751,2148]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>The Rusty Pick</b>").addTo(ol_pa);
@@ -170,6 +170,12 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([590,2489]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Mount Blair Trainyard</b>").addTo(ol_pa);
     L.marker(rc.unproject([610,2346]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Mount Blair</b>").addTo(ol_pa);
     L.marker(rc.unproject([836,2436]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Rollins Work Camp</b>").addTo(ol_pa);
+    L.marker(rc.unproject([947,2343]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>The Burning Mine</b>").addTo(ol_pa);
+    L.marker(rc.unproject([1246,2486]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Big Bend Tunnel West</b><br>x2").addTo(ol_pa);
+    L.marker(rc.unproject([664,2682]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>AMS Testing Site</b>").addTo(ol_pa);
+    L.marker(rc.unproject([751,2570]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Red Rocket Filling Station</b>").addTo(ol_pa);
+    L.marker(rc.unproject([758,2822]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Striker Row</b>").addTo(ol_pa);
+    L.marker(rc.unproject([1032,2762]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Garrahan Mining Headquarters</b><br>x4").addTo(ol_pa);
 
 
 //Vaults
@@ -338,33 +344,33 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([835,2449]), {icon: mark_hotdog, title: "Rollins Work Camp", riseOnHover: true}).bindTooltip("<b>Rollins Work Camp</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
 //
     L.marker(rc.unproject([781,2178]), {icon: mark_bunker, title: "Hornwright Air Purifier Site #01", riseOnHover: true}).bindTooltip("<b>Hornwright Air Purifier Site #01</b>").addTo(ol_loc);
-    L.marker(rc.unproject([929,2342]), {icon: mark_quarry, title: "The Burning Mine", riseOnHover: true}).bindTooltip("<b>The Burning Mine</b>").addTo(ol_loc);
-    L.marker(rc.unproject([985,2220]), {icon: mark_perch, title: "Widow's Perch", riseOnHover: true}).bindTooltip("<b>Widow's Perch</b>").addTo(ol_loc);
+    L.marker(rc.unproject([929,2342]), {icon: mark_quarry, title: "The Burning Mine", riseOnHover: true}).bindTooltip("<b>The Burning Mine</b><br>Bobblehead x4<br>Magazine x4").addTo(ol_loc);
+    L.marker(rc.unproject([985,2220]), {icon: mark_perch, title: "Widow's Perch", riseOnHover: true}).bindTooltip("<b>Widow's Perch</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
     L.marker(rc.unproject([1106,2142]), {icon: mark_raider, title: "Bleeding Kate's Grindhouse", riseOnHover: true}).bindTooltip("<b>Bleeding Kate's Grindhouse</b>").addTo(ol_loc);
     L.marker(rc.unproject([1200,2231]), {icon: mark_radiotower, title: "Relay Tower DP-B5-21", riseOnHover: true}).bindTooltip("<b>Relay Tower DP-B5-21</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1234,2271]), {icon: mark_mine, title: "Uncanny Caverns", riseOnHover: true}).bindTooltip("<b>Uncanny Caverns</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1234,2271]), {icon: mark_mine, title: "Uncanny Caverns", riseOnHover: true}).bindTooltip("<b>Uncanny Caverns</b><br>Bobblehead x4<br>Magazine x4").addTo(ol_loc);
     L.marker(rc.unproject([1325,2216]), {icon: mark_statue, title: "Miners Monument", riseOnHover: true}).bindTooltip("<b>Miners Monument</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1349,2390]), {icon: mark_perch, title: "Bastion Park", riseOnHover: true}).bindTooltip("<b>Bastion Park</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1349,2390]), {icon: mark_perch, title: "Bastion Park", riseOnHover: true}).bindTooltip("<b>Bastion Park</b><br>Bobblehead x2<br>Magazine x2").addTo(ol_loc);
     L.marker(rc.unproject([1019,2519]), {icon: mark_quarry, title: "Abandoned Mine Shaft 3", riseOnHover: true}).bindTooltip("<b>Abandoned Mine Shaft 3</b>").addTo(ol_loc);
     L.marker(rc.unproject([1049,2352]), {icon: mark_bunker, title: "Hornwright Air Purifier Site #02", riseOnHover: true}).bindTooltip("<b>Hornwright Air Purifier Site #02</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1162,2355]), {icon: mark_cemetery, title: "Pleasant Hills Cemetery", riseOnHover: true}).bindTooltip("<b>Pleasant Hills Cemetery</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1110,2429]), {icon: mark_town, title: "Lewisburg", riseOnHover: true}).bindTooltip("<b>Lewisburg</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1162,2355]), {icon: mark_cemetery, title: "Pleasant Hills Cemetery", riseOnHover: true}).bindTooltip("<b>Pleasant Hills Cemetery</b><br>Magazine x1<br>Cap Stash x1").addTo(ol_loc);
+    L.marker(rc.unproject([1110,2429]), {icon: mark_town, title: "Lewisburg", riseOnHover: true}).bindTooltip("<b>Lewisburg</b><br>Bobblehead x2<br>Magazine x2").addTo(ol_loc);
     L.marker(rc.unproject([1070,2480]), {icon: mark_fair, title: "Lake Reynolds", riseOnHover: true}).bindTooltip("<b>Lake Reynolds</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1227,2484]), {icon: mark_quarry, title: "Big Bend Tunnel West", riseOnHover: true}).bindTooltip("<b>Big Bend Tunnel West</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1227,2484]), {icon: mark_quarry, title: "Big Bend Tunnel West", riseOnHover: true}).bindTooltip("<b>Big Bend Tunnel West</b><br>Bobblehead x1<br>Magazine x1<br>Cap Stash x1").addTo(ol_loc);
     L.marker(rc.unproject([1227,2525]), {icon: mark_substation, title: "Monongah Power Substation MZ-03", riseOnHover: true}).bindTooltip("<b>Monongah Power Substation MZ-03</b>").addTo(ol_loc);
     L.marker(rc.unproject([402,2705]), {icon: mark_factory, title: "Hornwright Testing Site #02", riseOnHover: true}).bindTooltip("<b>Hornwright Testing Site #02</b>").addTo(ol_loc);
     L.marker(rc.unproject([455,2583]), {icon: mark_town, title: "Welch", riseOnHover: true}).bindTooltip("<b>Welch</b>").addTo(ol_loc);
     L.marker(rc.unproject([542,2669]), {icon: mark_factory, title: "Abandoned Mine Shaft 1", riseOnHover: true}).bindTooltip("<b>Abandoned Mine Shaft 1</b>").addTo(ol_loc);
-    L.marker(rc.unproject([663,2666]), {icon: mark_quarry, title: "AMS Testing Site", riseOnHover: true}).bindTooltip("<b>AMS Testing Site</b>").addTo(ol_loc);
+    L.marker(rc.unproject([663,2666]), {icon: mark_quarry, title: "AMS Testing Site", riseOnHover: true}).bindTooltip("<b>AMS Testing Site</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
     L.marker(rc.unproject([653,2568]), {icon: mark_bunker, title: "Hornwright Air Purifier Site #03", riseOnHover: true}).bindTooltip("<b>Hornwright Air Purifier Site #03</b>").addTo(ol_loc);
-    L.marker(rc.unproject([737,2567]), {icon: mark_rocket, title: "Red Rocket Filling Station", riseOnHover: true}).bindTooltip("<b>Red Rocket Filling Station</b>").addTo(ol_loc);
+    L.marker(rc.unproject([737,2567]), {icon: mark_rocket, title: "Red Rocket Filling Station", riseOnHover: true}).bindTooltip("<b>Red Rocket Filling Station</b><br>Bobblehead x1<br>Magazine x1<br>Cap Stash x1").addTo(ol_loc);
     L.marker(rc.unproject([854,2606]), {icon: mark_quarry, title: "Abandoned Mine Shaft 2", riseOnHover: true}).bindTooltip("<b>Abandoned Mine Shaft 2</b>").addTo(ol_loc);
-    L.marker(rc.unproject([817,2696]), {icon: mark_factory, title: "Hornwright Testing Site #03", riseOnHover: true}).bindTooltip("<b>Hornwright Testing Site #03</b>").addTo(ol_loc);
-    L.marker(rc.unproject([744,2819]), {icon: mark_camp, title: "Striker Row", riseOnHover: true}).bindTooltip("<b>Striker Row</b>").addTo(ol_loc);
+    L.marker(rc.unproject([817,2696]), {icon: mark_factory, title: "Hornwright Testing Site #03", riseOnHover: true}).bindTooltip("<b>Hornwright Testing Site #03</b><br>Bobblehead x1").addTo(ol_loc);
+    L.marker(rc.unproject([744,2819]), {icon: mark_camp, title: "Striker Row", riseOnHover: true}).bindTooltip("<b>Striker Row</b><br>Bobblehead x2<br>Magazine x2").addTo(ol_loc);
     L.marker(rc.unproject([964,2593]), {icon: mark_scraper, title: "Unfinished Mansion", riseOnHover: true}).bindTooltip("<b>Unfinished Mansion</b>").addTo(ol_loc);
     L.marker(rc.unproject([1012,2711]), {icon: mark_scraper, title: "Garrahan Estate", riseOnHover: true}).bindTooltip("<b>Garrahan Estate</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1134,2680]), {icon: mark_scraper, title: "Hornwright Estate", riseOnHover: true}).bindTooltip("<b>Hornwright Estate</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1018,2759]), {icon: mark_headquarters, title: "Garrahan Mining Headquarters", riseOnHover: true}).bindTooltip("<b>Garrahan Mining Headquarters</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1134,2680]), {icon: mark_scraper, title: "Hornwright Estate", riseOnHover: true}).bindTooltip("<b>Hornwright Estate</b><br>Cap Stash x1").addTo(ol_loc);
+    L.marker(rc.unproject([1018,2759]), {icon: mark_headquarters, title: "Garrahan Mining Headquarters", riseOnHover: true}).bindTooltip("<b>Garrahan Mining Headquarters</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
 //Savage Divide
     L.marker(rc.unproject([1958,448]), {icon: mark_palace, title: "Palace of the Winding Path", riseOnHover: true}).bindTooltip("<b>Palace of the Winding Path</b>").addTo(ol_loc);
     L.marker(rc.unproject([2466,368]), {icon: mark_cabin, title: "Bailey Family Cabin", riseOnHover: true}).bindTooltip("<b>Bailey Family Cabin</b>").addTo(ol_loc);
@@ -629,6 +635,12 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([1668,691]), {icon: mark_plan, riseOnHover: true}).bindTooltip("<b>Grafton Steel<br><b>Recipe:</b>").addTo(ol_rep);
     L.marker(rc.unproject([1854,215]), {icon: mark_plan, riseOnHover: true}).bindTooltip("<b>Knife Edge<br><b>Recipe:</b>").addTo(ol_rep);
     L.marker(rc.unproject([308,2197]), {icon: mark_plan, riseOnHover: true}).bindTooltip("<b>Camden Park<br><b>Recipe:</b>").addTo(ol_rep);
+    L.marker(rc.unproject([1190,2230]), {icon: mark_plan, riseOnHover: true}).bindTooltip("<b>Relay Tower DP-B5-21<br><b>Recipe:</b>").addTo(ol_rep);
+    L.marker(rc.unproject([1247,2267]), {icon: mark_plan, riseOnHover: true}).bindTooltip("<b>Uncanny Caverns<br><b>Recipe:</b>").addTo(ol_rep);
+    L.marker(rc.unproject([470,2573]), {icon: mark_plan, riseOnHover: true}).bindTooltip("<b>Welch<br><b>Recipe:</b>").addTo(ol_rep);
+    L.marker(rc.unproject([1057,2688]), {icon: mark_plan, riseOnHover: true}).bindTooltip("<b>Garrahan Estate<br><b>Recipe:</b>").addTo(ol_rep);
+    L.marker(rc.unproject([1149,2675]), {icon: mark_plan, riseOnHover: true}).bindTooltip("<b>Hornwright Estate<br><b>Recipe:</b>").addTo(ol_rep);
+
 
 
 
