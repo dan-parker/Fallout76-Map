@@ -105,16 +105,7 @@ textarea {
 
 
 html,body {height:100%;margin:0px;}
-i.fa:hover {
-  opacity: 1.0;
-}
-i.fa {
-  text-shadow: 2px 2px #272634;
-  opacity: 0.6;
-}
 #mapid {height:100%;}
-
-i.icon-white {color: white;}
 
 .mark_tr {
 	filter: invert(.5) sepia(1) saturate(.5) hue-rotate(140deg) drop-shadow(4px 4px 1px black);
