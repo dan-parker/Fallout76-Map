@@ -134,6 +134,9 @@ html,body {height:100%;margin:0px;}
 .mark_rift {
 	filter: /*invert(.5) sepia(1) saturate(4) hue-rotate(320deg)*/ drop-shadow(4px 4px 1px black);
 }
+.mark_vendor {
+	filter: invert(.5) sepia(1) saturate(3) hue-rotate(100deg) drop-shadow(4px 4px 1px black);
+}
 
 
 .svgmarker {
