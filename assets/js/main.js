@@ -16,7 +16,7 @@ var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
 
 // create the map
 var map = L.map('mapid', {
-  layers: [baselayer, ol_pa, ol_vault, ol_loc,ol_train,ol_pwr,ol_map,ol_tape,ol_wb,ol_rift],
+  layers: [baselayer, ol_vault, ol_loc,ol_train,ol_wb],
   fullscreenControl: true,
   fullscreenControlOptions: {
     position: 'topleft'
@@ -139,6 +139,26 @@ var color_tp = 'purple';	//Holo tape
 var color_rp = 'white';		//Receipt
 var color_ri = 'HotPink';	//Fissure
 
+//Let's create our Tooltip Template
+function tooltipTemplate(title,bobblehead=0,magazine=0,capstash=0,recipe='') {
+	var result = '<div class="tooltip">';
+ 	result += '<div class="tooltitle">'+title+'</div>';
+ 	if (bobblehead) result += '<div>Bobblehead: x' + bobblehead + '</div>';
+ 	if (magazine) result += '<div>Magazine: x' + magazine + '</div>';
+ 	if (capstash) result += '<div>Cap Stash: x' + capstash + '</div>';
+ 	if (recipe) result += '<div>Recipe/Plan: x' + recipe + '</div>';
+	result += '</div>';
+ 	return result;
+}
+
+function tooltipMapTemplate(title,img,text='') {
+	var result = '<div class="tooltip">';
+ 	result += '<div class="tooltitle">'+title+'</div>';
+ 	result += '<div><img src="assets/img/treasure/' + img + '"/></div>';
+ 	if (text) result += '<div>' + text + '</div>';
+	result += '</div>';
+ 	return result;
+}
 
     L.marker(rc.unproject([931,1914]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Wade Airport</b>").addTo(ol_pa);
     L.marker(rc.unproject([1617,1791]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>New Appalachian Central Trainyard</b>").addTo(ol_pa);
@@ -185,50 +205,50 @@ var color_ri = 'HotPink';	//Fissure
     L.marker(rc.unproject([870,2673]), {icon: mark_va63, title: 'Vault 63', riseOnHover: true}).bindTooltip("<b>Vault 63</b>").addTo(ol_vault);
 
 //Public Workshops
-    L.marker(rc.unproject([1140,975]), {icon: mark_wr, title: "Gorge Junkyard", riseOnHover: true}).bindTooltip("<b>Gorge Junkyard</b>").addTo(ol_wb);
-    L.marker(rc.unproject([920,1895]), {icon: mark_wr, title: "Wade Airport", riseOnHover: true}).bindTooltip("<b>Wade Airport</b><br>Cap Stash x1").addTo(ol_wb);
-    L.marker(rc.unproject([433,646]), {icon: mark_wr, title: "Tyler County Dirt Track", riseOnHover: true}).bindTooltip("<b>Tyler County Dirt Track</b>").addTo(ol_wb);
-    L.marker(rc.unproject([1110,327]), {icon: mark_wr, title: "Hemlock Holes Maintenance", riseOnHover: true}).bindTooltip("<b>Hemlock Holes Maintenance</b>").addTo(ol_wb);
-    L.marker(rc.unproject([1661,712]), {icon: mark_wr, title: "Grafton Steel Yard", riseOnHover: true}).bindTooltip("<b>Grafton Steel Yard</b>").addTo(ol_wb);
-    L.marker(rc.unproject([574,1432]), {icon: mark_wr, title: "Sunshine Meadows Industrial Farm", riseOnHover: true}).bindTooltip("<b>Sunshine Meadows Industrial Farm</b>").addTo(ol_wb);
-    L.marker(rc.unproject([377,1699]), {icon: mark_wr, title: "Billings Homestead", riseOnHover: true}).bindTooltip("<b>Billings Homestead</b>").addTo(ol_wb);
-    L.marker(rc.unproject([643,1943]), {icon: mark_wr, title: "Poseidon Energy Plant Yard", riseOnHover: true}).bindTooltip("<b>Poseidon Energy Plant Yard</b>").addTo(ol_wb);
-    L.marker(rc.unproject([1108,1807]), {icon: mark_wr, title: "Lakeside Cabins", riseOnHover: true}).bindTooltip("<b>Lakeside Cabins</b>").addTo(ol_wb);
-    L.marker(rc.unproject([638,2063]), {icon: mark_wr, title: "Charleston Landfill", riseOnHover: true}).bindTooltip("<b>Charleston Landfill</b>").addTo(ol_wb);
-    L.marker(rc.unproject([592,2344]), {icon: mark_wr, title: "Mount Blair", riseOnHover: true}).bindTooltip("<b>Mount Blair</b><br>Bobblehead x2<br>Magazine x2").addTo(ol_wb);
-    L.marker(rc.unproject([2494,556]), {icon: mark_wr, title: "Red Rocket Mega Stop", riseOnHover: true}).bindTooltip("<b>Red Rocket Mega Stop</b>").addTo(ol_wb);
-    L.marker(rc.unproject([1828,1143]), {icon: mark_wr, title: "Monongah Power Plant Yard", riseOnHover: true}).bindTooltip("<b>Monongah Power Plant Yard</b>").addTo(ol_wb);
-    L.marker(rc.unproject([1805,2380]), {icon: mark_wr, title: "Spruce Knob", riseOnHover: true}).bindTooltip("<b>Spruce Knob</b>").addTo(ol_wb);
-    L.marker(rc.unproject([1523,2731]), {icon: mark_wr, title: "Federal Disposal Field HZ-21", riseOnHover: true}).bindTooltip("<b>Federal Disposal Field HZ-21</b>").addTo(ol_wb);
-    L.marker(rc.unproject([2863,976]), {icon: mark_wr, title: "Thunder Mountain Power Plant Yard", riseOnHover: true}).bindTooltip("<b>Thunder Mountain Power Plant Yard</b>").addTo(ol_wb);
-    L.marker(rc.unproject([2373,1466]), {icon: mark_wr, title: "Berkeley Springs West", riseOnHover: true}).bindTooltip("<b>Berkeley Springs West</b>").addTo(ol_wb);
-    L.marker(rc.unproject([2302,353]), {icon: mark_wr, title: "Converted Munitions Factory", riseOnHover: true}).bindTooltip("<b>Converted Munitions Factory</b>").addTo(ol_wb);
-    L.marker(rc.unproject([2860,1797]), {icon: mark_wr, title: "Dabney Homestead", riseOnHover: true}).bindTooltip("<b>Dabney Homestead</b>").addTo(ol_wb);
-    L.marker(rc.unproject([2609,1107]), {icon: mark_wr, title: "Dolly Sods Campground", riseOnHover: true}).bindTooltip("<b>Dolly Sods Campground</b>").addTo(ol_wb);
-    L.marker(rc.unproject([2821,2290]), {icon: mark_wr, title: "Abandoned Bog Town", riseOnHover: true}).bindTooltip("<b>Abandoned Bog Town</b>").addTo(ol_wb);
-    L.marker(rc.unproject([204,2552]), {icon: mark_wr, title: "Beckley Mine Exhibit", riseOnHover: true}).bindTooltip("<b>Beckley Mine Exhibit</b><br>Cap Stash x1").addTo(ol_wb);
+    L.marker(rc.unproject([1140,975]), {icon: mark_wr, title: "Gorge Junkyard", riseOnHover: true}).bindTooltip(tooltipTemplate("Gorge Junkyard")).addTo(ol_wb);
+    L.marker(rc.unproject([920,1895]), {icon: mark_wr, title: "Wade Airport", riseOnHover: true}).bindTooltip(tooltipTemplate('Wade Airport',0,0,1,0)).addTo(ol_wb);
+    L.marker(rc.unproject([433,646]), {icon: mark_wr, title: "Tyler County Dirt Track", riseOnHover: true}).bindTooltip(tooltipTemplate("Tyler County Dirt Track")).addTo(ol_wb);
+    L.marker(rc.unproject([1110,327]), {icon: mark_wr, title: "Hemlock Holes Maintenance", riseOnHover: true}).bindTooltip(tooltipTemplate("Hemlock Holes Maintenance")).addTo(ol_wb);
+    L.marker(rc.unproject([1661,712]), {icon: mark_wr, title: "Grafton Steel Yard", riseOnHover: true}).bindTooltip(tooltipTemplate("Grafton Steel Yard")).addTo(ol_wb);
+    L.marker(rc.unproject([574,1432]), {icon: mark_wr, title: "Sunshine Meadows Industrial Farm", riseOnHover: true}).bindTooltip(tooltipTemplate("Sunshine Meadows Industrial Farm")).addTo(ol_wb);
+    L.marker(rc.unproject([377,1699]), {icon: mark_wr, title: "Billings Homestead", riseOnHover: true}).bindTooltip(tooltipTemplate("Billings Homestead")).addTo(ol_wb);
+    L.marker(rc.unproject([643,1943]), {icon: mark_wr, title: "Poseidon Energy Plant Yard", riseOnHover: true}).bindTooltip(tooltipTemplate("Poseidon Energy Plant Yard")).addTo(ol_wb);
+    L.marker(rc.unproject([1108,1807]), {icon: mark_wr, title: "Lakeside Cabins", riseOnHover: true}).bindTooltip(tooltipTemplate("Lakeside Cabins")).addTo(ol_wb);
+    L.marker(rc.unproject([638,2063]), {icon: mark_wr, title: "Charleston Landfill", riseOnHover: true}).bindTooltip(tooltipTemplate("Charleston Landfill")).addTo(ol_wb);
+    L.marker(rc.unproject([592,2344]), {icon: mark_wr, title: "Mount Blair", riseOnHover: true}).bindTooltip(tooltipTemplate("Mount Blair",2,2)).addTo(ol_wb);
+    L.marker(rc.unproject([2494,556]), {icon: mark_wr, title: "Red Rocket Mega Stop", riseOnHover: true}).bindTooltip(tooltipTemplate("Red Rocket Mega Stop")).addTo(ol_wb);
+    L.marker(rc.unproject([1828,1143]), {icon: mark_wr, title: "Monongah Power Plant Yard", riseOnHover: true}).bindTooltip(tooltipTemplate("Monongah Power Plant Yard")).addTo(ol_wb);
+    L.marker(rc.unproject([1805,2380]), {icon: mark_wr, title: "Spruce Knob", riseOnHover: true}).bindTooltip(tooltipTemplate("Spruce Knob")).addTo(ol_wb);
+    L.marker(rc.unproject([1523,2731]), {icon: mark_wr, title: "Federal Disposal Field HZ-21", riseOnHover: true}).bindTooltip(tooltipTemplate("Federal Disposal Field HZ-21")).addTo(ol_wb);
+    L.marker(rc.unproject([2863,976]), {icon: mark_wr, title: "Thunder Mountain Power Plant Yard", riseOnHover: true}).bindTooltip(tooltipTemplate("Thunder Mountain Power Plant Yard")).addTo(ol_wb);
+    L.marker(rc.unproject([2373,1466]), {icon: mark_wr, title: "Berkeley Springs West", riseOnHover: true}).bindTooltip(tooltipTemplate("Berkeley Springs West")).addTo(ol_wb);
+    L.marker(rc.unproject([2302,353]), {icon: mark_wr, title: "Converted Munitions Factory", riseOnHover: true}).bindTooltip(tooltipTemplate("Converted Munitions Factory")).addTo(ol_wb);
+    L.marker(rc.unproject([2860,1797]), {icon: mark_wr, title: "Dabney Homestead", riseOnHover: true}).bindTooltip(tooltipTemplate("Dabney Homestead")).addTo(ol_wb);
+    L.marker(rc.unproject([2609,1107]), {icon: mark_wr, title: "Dolly Sods Campground", riseOnHover: true}).bindTooltip(tooltipTemplate("Dolly Sods Campground")).addTo(ol_wb);
+    L.marker(rc.unproject([2821,2290]), {icon: mark_wr, title: "Abandoned Bog Town", riseOnHover: true}).bindTooltip(tooltipTemplate("Abandoned Bog Town")).addTo(ol_wb);
+    L.marker(rc.unproject([204,2552]), {icon: mark_wr, title: "Beckley Mine Exhibit", riseOnHover: true}).bindTooltip(tooltipTemplate("Beckley Mine Exhibit",0,0,1)).addTo(ol_wb);
 
 
 //The Forest
-    L.marker(rc.unproject([778,1035]), {icon: mark_shack, title: "Moonshiner's Shack", riseOnHover: true}).bindTooltip("<b>Moonshiner's Shack</b>").addTo(ol_loc);
-    L.marker(rc.unproject([942,927]), {icon: mark_lookout, title: 'North Kanawha Lookout', riseOnHover: true}).bindTooltip("<b>North Kanawha Lookout</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1026,833]), {icon: mark_cabin, title: 'Twin Pine Cabins', riseOnHover: true}).bindTooltip("<b>Twin Pine Cabins</b>").addTo(ol_loc);
-    L.marker(rc.unproject([812,1140]), {icon: mark_factory, title: 'Gilman Lumber Mill', riseOnHover: true}).bindTooltip("<b>Gilman Lumber Mill</b>").addTo(ol_loc);
-    L.marker(rc.unproject([910,1044]), {icon: mark_cabin, title: 'Isolated Cabin', riseOnHover: true}).bindTooltip("<b>Isolated Cabin</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1013,1110]), {icon: mark_lighthouse, title: 'Landview Lighthouse', riseOnHover: true}).bindTooltip("<b>Landview Lighthouse</b><br>Bobblehead x2<br>Magazine x2").addTo(ol_loc);
-    L.marker(rc.unproject([617,1249]), {icon: mark_cabin, title: 'Alpine River Cabins', riseOnHover: true}).bindTooltip("<b>Alpine River Cabins</b><br>Bobblehead x2<br>Magazine x2").addTo(ol_loc);
-    L.marker(rc.unproject([870,1226]), {icon: mark_farm, title: 'Wixon Homestead', riseOnHover: true}).bindTooltip("<b>Wixon Homestead</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
-    L.marker(rc.unproject([811,1290]), {icon: mark_lookout, title: 'Flatwoods Lookout', riseOnHover: true}).bindTooltip("<b>Flatwoods Lookout</b><br>Recipe/Plan").addTo(ol_loc);
-    L.marker(rc.unproject([964,1315]), {icon: mark_camp, title: "Overseer's Camp", riseOnHover: true}).bindTooltip("<b>Overseer's Camp</b>").addTo(ol_loc);
-    L.marker(rc.unproject([713,1368]), {icon: mark_radiotower, title: 'Relay Tower EM-B1-27', riseOnHover: true}).bindTooltip("<b>Relay Tower EM-B1-27</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
-    L.marker(rc.unproject([854,1426]), {icon: mark_lodge, title: 'Green Country Lodge', riseOnHover: true}).bindTooltip("<b>Green Country Lodge</b>").addTo(ol_loc);
-    L.marker(rc.unproject([795,1500]), {icon: mark_vendortown, title: 'Flatwoods (Responders)', riseOnHover: true}).bindTooltip("<b>Flatwoods (Responders)</b><br>Recipe/Plan").addTo(ol_loc);
-    L.marker(rc.unproject([724,1490]), {icon: mark_agcenter, title: 'Vault-Tec Agricultural Research Center', riseOnHover: true}).bindTooltip("<b>Vault-Tec Agricultural Research Center</b><br>Bobblehead x4<br>Magazine x4<br>Cap Stash x5").addTo(ol_loc);
+    L.marker(rc.unproject([778,1035]), {icon: mark_shack, title: "Moonshiner's Shack", riseOnHover: true}).bindTooltip(tooltipTemplate("Moonshiner's Shack")).addTo(ol_loc);
+    L.marker(rc.unproject([942,927]), {icon: mark_lookout, title: 'North Kanawha Lookout', riseOnHover: true}).bindTooltip(tooltipTemplate("North Kanawha Lookout")).addTo(ol_loc);
+    L.marker(rc.unproject([1026,833]), {icon: mark_cabin, title: 'Twin Pine Cabins', riseOnHover: true}).bindTooltip(tooltipTemplate("Twin Pine Cabins")).addTo(ol_loc);
+    L.marker(rc.unproject([812,1140]), {icon: mark_factory, title: 'Gilman Lumber Mill', riseOnHover: true}).bindTooltip(tooltipTemplate("Gilman Lumber Mill")).addTo(ol_loc);
+    L.marker(rc.unproject([910,1044]), {icon: mark_cabin, title: 'Isolated Cabin', riseOnHover: true}).bindTooltip(tooltipTemplate("Isolated Cabin")).addTo(ol_loc);
+    L.marker(rc.unproject([1013,1110]), {icon: mark_lighthouse, title: 'Landview Lighthouse', riseOnHover: true}).bindTooltip(tooltipTemplate("Landview Lighthouse",2,2)).addTo(ol_loc);
+    L.marker(rc.unproject([617,1249]), {icon: mark_cabin, title: 'Alpine River Cabins', riseOnHover: true}).bindTooltip(tooltipTemplate("Alpine River Cabins",2,2)).addTo(ol_loc);
+    L.marker(rc.unproject([870,1226]), {icon: mark_farm, title: 'Wixon Homestead', riseOnHover: true}).bindTooltip(tooltipTemplate("Wixon Homestead",1,1)).addTo(ol_loc);
+    L.marker(rc.unproject([811,1290]), {icon: mark_lookout, title: 'Flatwoods Lookout', riseOnHover: true}).bindTooltip(tooltipTemplate("Flatwoods Lookout",0,0,0,1)).addTo(ol_loc);
+    L.marker(rc.unproject([964,1315]), {icon: mark_camp, title: "Overseer's Camp", riseOnHover: true}).bindTooltip(tooltipTemplate("Overseer's Camp")).addTo(ol_loc);
+    L.marker(rc.unproject([713,1368]), {icon: mark_radiotower, title: 'Relay Tower EM-B1-27', riseOnHover: true}).bindTooltip(tooltipTemplate("Relay Tower EM-B1-27",1,1)).addTo(ol_loc);
+    L.marker(rc.unproject([854,1426]), {icon: mark_lodge, title: 'Green Country Lodge', riseOnHover: true}).bindTooltip(tooltipTemplate("Green Country Lodge")).addTo(ol_loc);
+    L.marker(rc.unproject([795,1500]), {icon: mark_vendortown, title: 'Flatwoods (Responders)', riseOnHover: true}).bindTooltip(tooltipTemplate("Flatwoods (Responders)",0,0,0,1)).addTo(ol_loc);
+    L.marker(rc.unproject([724,1490]), {icon: mark_agcenter, title: 'Vault-Tec Agricultural Research Center', riseOnHover: true}).bindTooltip(tooltipTemplate("Vault-Tec Agricultural Research Center",4,4,5)).addTo(ol_loc);
 //
-    L.marker(rc.unproject([354,278]), {icon: mark_factory, title: "WV Lumber Co.", riseOnHover: true}).bindTooltip("<b>WV Lumber Co.</b><br>Bobblehead x2<br>Magazine x2").addTo(ol_loc);
-    L.marker(rc.unproject([502,468]), {icon: mark_shack, title: "Darling Sister's Lab", riseOnHover: true}).bindTooltip("<b>Darling Sister's Lab</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
-    L.marker(rc.unproject([546,400]), {icon: mark_shack, title: "Groves Family Cabin", riseOnHover: true}).bindTooltip("<b>Groves Family Cabin</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
-    L.marker(rc.unproject([655,392]), {icon: mark_farm, title: 'Aaronholdt Homestead', riseOnHover: true}).bindTooltip("<b>Aaronholdt Homestead</b><br>Bobblehead x3<br>Magazine x2").addTo(ol_loc);
+    L.marker(rc.unproject([354,278]), {icon: mark_factory, title: "WV Lumber Co.", riseOnHover: true}).bindTooltip(tooltipTemplate("WV Lumber Co.",2,2)).addTo(ol_loc);
+    L.marker(rc.unproject([502,468]), {icon: mark_shack, title: "Darling Sister's Lab", riseOnHover: true}).bindTooltip(tooltipTemplate("Darling Sister's Lab",1,1)).addTo(ol_loc);
+    L.marker(rc.unproject([546,400]), {icon: mark_shack, title: "Groves Family Cabin", riseOnHover: true}).bindTooltip(tooltipTemplate("Groves Family Cabin",1,1)).addTo(ol_loc);
+    L.marker(rc.unproject([655,392]), {icon: mark_farm, title: 'Aaronholdt Homestead', riseOnHover: true}).bindTooltip(tooltipTemplate("Aaronholdt Homestead",3,2)).addTo(ol_loc);
     L.marker(rc.unproject([510,629]), {icon: mark_fair, title: 'Tyler County Fairgrounds', riseOnHover: true}).bindTooltip("<b>Tyler County Fairgrounds</b><br>Bobblehead x3<br>Magazine x3<br>Cap Stash x1<br>Recipe/Plan").addTo(ol_loc);
     L.marker(rc.unproject([315,709]), {icon: mark_tree, title: 'Deathclaw Island', riseOnHover: true}).bindTooltip("<b>Deathclaw Island</b><br>Bobblehead x1<br>Magazine x1<br>Cap Stash x1").addTo(ol_loc);
     L.marker(rc.unproject([452,751]), {icon: mark_radiotower, title: 'Transmission Station 1AT-U03', riseOnHover: true}).bindTooltip("<b>Transmission Station 1AT-U03</b><br>Magazine x1").addTo(ol_loc);
@@ -565,41 +585,41 @@ var color_ri = 'HotPink';	//Fissure
 
 
 //Treasure
-    L.marker(rc.unproject([291,1179]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([433,1916]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([576,2086]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 3)").addTo(ol_map);
-    L.marker(rc.unproject([718,787]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 4)").addTo(ol_map);
-    L.marker(rc.unproject([675,1978]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 5)").addTo(ol_map);
-    L.marker(rc.unproject([964,1287]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 6)").addTo(ol_map);
-    L.marker(rc.unproject([997,2209]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 7)").addTo(ol_map);
-    L.marker(rc.unproject([1257,1116]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 8)").addTo(ol_map);
-    L.marker(rc.unproject([1254,1808]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 9)").addTo(ol_map);
-    L.marker(rc.unproject([1351,1336]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Forest (Map 10)").addTo(ol_map);
-    L.marker(rc.unproject([997,576]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Toxic Valley (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([1329,477]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Toxic Valley (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([1586,681]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Toxic Valley (Map 3)").addTo(ol_map);
-    L.marker(rc.unproject([1723,292]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Toxic Valley (Map 4)").addTo(ol_map);
-    L.marker(rc.unproject([667,2649]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Ash Heap (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([829,2203]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Ash Heap (Map 7)").addTo(ol_map);
-    L.marker(rc.unproject([1473,2745]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([1653,1756]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([1767,1427]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 3)").addTo(ol_map);
-    L.marker(rc.unproject([1795,2065]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 4)").addTo(ol_map);
-    L.marker(rc.unproject([1763,1953]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 5)").addTo(ol_map);
-    L.marker(rc.unproject([1934,387]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 6)").addTo(ol_map);
-    L.marker(rc.unproject([1978,2535]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 7)").addTo(ol_map);
-    L.marker(rc.unproject([2014,1404]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 8)").addTo(ol_map);
-    L.marker(rc.unproject([2233,1327]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 9)").addTo(ol_map);
-    L.marker(rc.unproject([2602,370]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Savage Divide (Map 10)").addTo(ol_map);
-    L.marker(rc.unproject([2533,836]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> The Mire (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([2547,1823]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> The Mire (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([2660,1508]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> The Mire (Map 3)").addTo(ol_map);
-    L.marker(rc.unproject([2781,1068]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> The Mire (Map 4)").addTo(ol_map);
-    L.marker(rc.unproject([2814,889]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> The Mire (Map 5)").addTo(ol_map);
-    L.marker(rc.unproject([2464,2543]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Cranberry Bog (Map 1)").addTo(ol_map);
-    L.marker(rc.unproject([2642,2247]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Cranberry Bog (Map 2)").addTo(ol_map);
-    L.marker(rc.unproject([2776,2867]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Cranberry Bog (Map 3)").addTo(ol_map);
-    L.marker(rc.unproject([2889,2261]), {icon: mark_map, riseOnHover: true}).bindTooltip("<b>Treasure:</b> Cranberry Bog (Map 4)").addTo(ol_map);
+    L.marker(rc.unproject([291,1179]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 1)","forest-1.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([433,1916]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 2)","forest-2.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([576,2086]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 3)","forest-3.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([718,787]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 4)","forest-4.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([675,1978]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 5)","forest-5.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([964,1287]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 6)","forest-6.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([997,2209]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 7)","forest-7.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1257,1116]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 8)","forest-8.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1254,1808]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 9)","forest-9.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1351,1336]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Forest (Map 10)","forest-10.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([997,576]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Toxic Valley (Map 1)","toxic-1.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1329,477]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Toxic Valley (Map 2)","toxic-2.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1586,681]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Toxic Valley (Map 3)","toxic-3.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1723,292]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Toxic Valley (Map 4)","toxic-4.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([667,2649]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Ash Heap (Map 1)","ash-1.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([829,2203]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Ash Heap (Map 7)","ash-2.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1473,2745]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 1)","divide-1.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1653,1756]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 2)","divide-2.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1767,1427]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 3)","divide-3.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1795,2065]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 4)","divide-4.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1763,1953]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 5)","divide-5.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1934,387]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 6)","divide-6.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([1978,2535]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 7)","divide-7.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2014,1404]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 8)","divide-8.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2233,1327]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 9)","divide-9.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2602,370]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Savage Divide (Map 10)","divide-10.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2533,836]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("The Mire (Map 1)","mire-1.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2547,1823]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("The Mire (Map 2)","mire-2.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2660,1508]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("The Mire (Map 3)","mire-3.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2781,1068]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("The Mire (Map 4)","mire-4.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2814,889]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("The Mire (Map 5)","mire-5.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2464,2543]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Cranberry Bog (Map 1)","bog-1.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2642,2247]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Cranberry Bog (Map 2)","bog-2.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2776,2867]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Cranberry Bog (Map 3)","bog-3.jpg")).addTo(ol_map);
+    L.marker(rc.unproject([2889,2261]), {icon: mark_map, riseOnHover: true}).bindTooltip(tooltipMapTemplate("Cranberry Bog (Map 4)","bog-4.jpg")).addTo(ol_map);
 
 
 //Holotapes
@@ -645,13 +665,11 @@ var overlays = {
 
 L.control.layers(null, overlays).addTo(map);
 
-
 var searchlayers = L.layerGroup([
 	ol_vault,
 	ol_loc,
 	ol_wb,
-	ol_train,
-	ol_tape
+	ol_train
 ]);
 
 	var controlSearch = new L.Control.Search({
