@@ -146,6 +146,14 @@ html,body {height:100%;margin:0px;}
   opacity: 1.0;
 }
 
+.icon {
+  opacity: 0.8;
+}
+.icon:hover {
+  opacity: 1.0;
+}
+
+
 .tooltitle {font-weight:bold;font-size: 0.9vw;}
 
 

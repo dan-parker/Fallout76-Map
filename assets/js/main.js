@@ -1,3 +1,4 @@
+
 var ol_pa = L.layerGroup();
 var ol_vault = L.layerGroup();
 var ol_loc = L.layerGroup();
@@ -8,6 +9,8 @@ var ol_tape = L.layerGroup();
 var ol_wb = L.layerGroup();
 var ol_rift = L.layerGroup();
 
+var ol_locv = L.layerGroup();
+
 // the tile layer containing the image generated with `gdal2tiles --leaflet -p raster -w none <img> tiles`
 var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
   noWrap: true, 
@@ -16,7 +19,7 @@ var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
 
 // create the map
 var map = L.map('mapid', {
-  layers: [baselayer, ol_vault, ol_loc,ol_train,ol_wb],
+  layers: [baselayer, ol_locv,ol_vault,ol_loc,ol_train,ol_wb],
   fullscreenControl: true,
   fullscreenControlOptions: {
     position: 'topleft'
@@ -42,35 +45,54 @@ map.setMaxZoom(5)
 map.setView(rc.unproject([805,975]),3)
 
 
-var mark_tr = L.icon({ iconUrl: './assets/icon/trainstation.svg', iconSize: [32,28], className:'mark_vendor svgmarker'}); 	//Train Station
+var mark_tr = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'trainstation', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Train Station
+//var mark_wr =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'workbench', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_wr'}); 	//Public Workbench
+var mark_va76 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault76', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault76
+var mark_va63 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault63', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault63
+var mark_va94 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault94', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault94
+var mark_va96 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault96', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault96
+var mark_va = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 		//Vault
+var mark_rift = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fissure', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_rift'}); 	//Fissure
+
+//var mark_tr = L.icon({ iconUrl: './assets/icon/trainstation.svg', iconSize: [32,28], className:'mark_vendor svgmarker'}); 	//Train Station
 var mark_wr = L.icon({ iconUrl: './assets/icon/workbench.svg', iconSize: [32,32], className:'mark_wr svgmarker'}); 	//Public Workbench
-var mark_va = L.icon({ iconUrl: './assets/icon/vault.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 		//Vault
-var mark_va76 = L.icon({ iconUrl: './assets/icon/vault76.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault76
-var mark_va63 = L.icon({ iconUrl: './assets/icon/vault63.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault63
-var mark_va94 = L.icon({ iconUrl: './assets/icon/vault94.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault94
-var mark_va96 = L.icon({ iconUrl: './assets/icon/vault96.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault96
+//var mark_va = L.icon({ iconUrl: './assets/icon/vault.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 		//Vault
+//var mark_va76 = L.icon({ iconUrl: './assets/icon/vault76.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault76
+//var mark_va63 = L.icon({ iconUrl: './assets/icon/vault63.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault63
+//var mark_va94 = L.icon({ iconUrl: './assets/icon/vault94.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault94
+//var mark_va96 = L.icon({ iconUrl: './assets/icon/vault96.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault96
 var mark_map = L.icon({ iconUrl: './assets/icon/map.svg', iconSize: [32,32], className:'mark_tm svgmarker'}); 		//Treasure Map
 var mark_tape = L.icon({ iconUrl: './assets/icon/holotape.svg', iconSize: [32,32], className:'mark_tape svgmarker'}); 	//Holotape
 var mark_fcore = L.icon({ iconUrl: './assets/icon/fcore.svg', iconSize: [32,32], className:'mark_fcore svgmarker'}); 	//Fusion Core
 var mark_parmor = L.icon({ iconUrl: './assets/icon/parmor.svg', iconSize: [32,32], className:'mark_parmor svgmarker'}); //Power Armor
-var mark_rift = L.icon({ iconUrl: './assets/icon/fissure.svg', iconSize: [32,32], className:'mark_rift svgmarker'}); 	//Fissure
+//var mark_rift = L.icon({ iconUrl: './assets/icon/fissure.svg', iconSize: [32,32], className:'mark_rift svgmarker'}); 	//Fissure
 
-var mark_farm = L.icon({ iconUrl: './assets/icon/farm.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Farm/Homestead
-var mark_cabin = L.icon({ iconUrl: './assets/icon/cabin.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Farm/Cabin
-var mark_lighthouse = L.icon({ iconUrl: './assets/icon/lighthouse.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Lighthouse
-var mark_shack = L.icon({ iconUrl: './assets/icon/shack.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Shack/Lab
-var mark_radiotower = L.icon({ iconUrl: './assets/icon/radiotower.svg', iconSize: [21,32], className:'mark_lo svgmarker'}); 	//Relay Tower
-var mark_lookout = L.icon({ iconUrl: './assets/icon/lookout.svg', iconSize: [20,36], className:'mark_lo svgmarker'}); 		//Lookout
-var mark_factory = L.icon({ iconUrl: './assets/icon/factory.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Lumberyard
+var mark_farm = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
+//var mark_farm = L.icon({ iconUrl: './assets/icon/farm.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Farm/Homestead
+var mark_cabin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cabin', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'});  		//Farm/Cabin
+//var mark_cabin = L.icon({ iconUrl: './assets/icon/cabin.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Farm/Cabin
+var mark_lighthouse = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lighthouse', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Lighthouse
+//var mark_lighthouse = L.icon({ iconUrl: './assets/icon/lighthouse.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Lighthouse
+//var mark_shack = L.icon({ iconUrl: './assets/icon/shack.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Shack/Lab
+var mark_shack = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'shack', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Shack/Lab
+var mark_radiotower = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'radiotower', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Relay Tower
+//var mark_radiotower = L.icon({ iconUrl: './assets/icon/radiotower.svg', iconSize: [21,32], className:'mark_lo svgmarker'}); 	//Relay Tower
+var mark_lookout = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lookout
+//var mark_lookout = L.icon({ iconUrl: './assets/icon/lookout.svg', iconSize: [20,36], className:'mark_lo svgmarker'}); 		//Lookout
+var mark_factory = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'factory', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lumberyard
+//var mark_factory = L.icon({ iconUrl: './assets/icon/factory.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Lumberyard
 var mark_fair = L.icon({ iconUrl: './assets/icon/fair.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Fair
 var mark_vendorfair = L.icon({ iconUrl: './assets/icon/fair.svg', iconSize: [32,32], className:'mark_vendor svgmarker'}); 	//Fair-Vendor
 var mark_waterplant = L.icon({ iconUrl: './assets/icon/waterplant.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Water Treatment
 var mark_substation = L.icon({ iconUrl: './assets/icon/substation.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Substation
-var mark_town = L.icon({ iconUrl: './assets/icon/town.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Town
-var mark_vendortown = L.icon({ iconUrl: './assets/icon/town.svg', iconSize: [32,32], className:'mark_vendor svgmarker'}); 	//Town-Vendor
+var mark_town = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'town', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Town
+//var mark_town = L.icon({ iconUrl: './assets/icon/town.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Town
+var mark_vendortown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'town', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Town-Vendor
+//var mark_vendortown = L.icon({ iconUrl: './assets/icon/town.svg', iconSize: [32,32], className:'mark_vendor svgmarker'}); 	//Town-Vendor
 var mark_plane = L.icon({ iconUrl: './assets/icon/plane.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Plane/Airport
 var mark_vendorplane = L.icon({ iconUrl: './assets/icon/plane.svg', iconSize: [32,32], className:'mark_vendor svgmarker'}); 	//Plane/Airport-Vendor
-var mark_manor = L.icon({ iconUrl: './assets/icon/manor.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Manor
+var mark_manor = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'manor', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Manor
+//var mark_manor = L.icon({ iconUrl: './assets/icon/manor.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Manor
 var mark_nuka = L.icon({ iconUrl: './assets/icon/nuka.svg', iconSize: [22,42], className:'mark_lo svgmarker'}); 		//Nuka
 var mark_power = L.icon({ iconUrl: './assets/icon/power.svg', iconSize: [25,34], className:'mark_lo svgmarker'}); 		//Power Plant
 var mark_railyard = L.icon({ iconUrl: './assets/icon/railyard.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Railyard
@@ -83,47 +105,92 @@ var mark_capital = L.icon({ iconUrl: './assets/icon/capital.svg', iconSize: [32,
 var mark_teapot = L.icon({ iconUrl: './assets/icon/teapot.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Teapot
 var mark_cream = L.icon({ iconUrl: './assets/icon/cream.svg', iconSize: [19,32], className:'mark_lo svgmarker'}); 		//Cream
 var mark_bridge = L.icon({ iconUrl: './assets/icon/bridge.svg', iconSize: [32,26], className:'mark_lo svgmarker'}); 		//Bridge
-var mark_camp = L.icon({ iconUrl: './assets/icon/camp.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Camp
-var mark_agcenter = L.icon({ iconUrl: './assets/icon/agcenter.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Agricultural Center
-var mark_tree = L.icon({ iconUrl: './assets/icon/tree.svg', iconSize: [26,32], className:'mark_lo svgmarker'}); 		//Island
-var mark_disposal = L.icon({ iconUrl: './assets/icon/disposal.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Ordinance/Disposal
-var mark_houses = L.icon({ iconUrl: './assets/icon/houses.svg', iconSize: [32,30], className:'mark_lo svgmarker'}); 		//Houses
-var mark_city = L.icon({ iconUrl: './assets/icon/city.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//City
-var mark_pub = L.icon({ iconUrl: './assets/icon/pub.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 			//Pub
-var mark_dam = L.icon({ iconUrl: './assets/icon/dam.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 			//Dam
-var mark_mine = L.icon({ iconUrl: './assets/icon/mine.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Mine
-var mark_arktos = L.icon({ iconUrl: './assets/icon/arktos.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Arktos
-var mark_golf = L.icon({ iconUrl: './assets/icon/golf.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Golf
-var mark_snow = L.icon({ iconUrl: './assets/icon/snow.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Snow
-var mark_vendorsnow = L.icon({ iconUrl: './assets/icon/snow.svg', iconSize: [32,32], className:'mark_vendor svgmarker'}); 	//Snow-Vendor
-var mark_base = L.icon({ iconUrl: './assets/icon/base.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Military base
-var mark_hotdog = L.icon({ iconUrl: './assets/icon/hotdog.svg', iconSize: [35,21], className:'mark_lo svgmarker'}); 		//Hotdog
-var mark_dock = L.icon({ iconUrl: './assets/icon/dock.svg', iconSize: [32,28], className:'mark_lo svgmarker'}); 		//Dock
-var mark_cemetery = L.icon({ iconUrl: './assets/icon/cemetery.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Cemetery
-var mark_scraper = L.icon({ iconUrl: './assets/icon/scraper.svg', iconSize: [20,32], className:'mark_lo svgmarker'}); 		//SkyScraper
-var mark_vendorscraper = L.icon({ iconUrl: './assets/icon/scraper.svg', iconSize: [20,32], className:'mark_vendor svgmarker'}); //SkyScraper-Vendor
-var mark_mansion = L.icon({ iconUrl: './assets/icon/mansion.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Sugarmaple
-var mark_raider = L.icon({ iconUrl: './assets/icon/raider.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Raider
-var mark_prison = L.icon({ iconUrl: './assets/icon/prison.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Prison
-var mark_pond = L.icon({ iconUrl: './assets/icon/pond.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Pond
-var mark_statue = L.icon({ iconUrl: './assets/icon/statue.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Statue
-var mark_spacestation = L.icon({ iconUrl: './assets/icon/spacestation.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); //Spacestation
-var mark_fort = L.icon({ iconUrl: './assets/icon/fort.svg', iconSize: [32,22], className:'mark_lo svgmarker'}); 		//Fort
-var mark_quarry = L.icon({ iconUrl: './assets/icon/quarry.svg', iconSize: [32,30], className:'mark_lo svgmarker'}); 		//Quarry
-var mark_bunker = L.icon({ iconUrl: './assets/icon/bunker.svg', iconSize: [32,19], className:'mark_lo svgmarker'}); 		//Bunker
-var mark_vendorbunker = L.icon({ iconUrl: './assets/icon/bunker.svg', iconSize: [32,19], className:'mark_vendor svgmarker'}); 	//Bunker-Vendor
-var mark_rocket = L.icon({ iconUrl: './assets/icon/rocket.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Rocket
-var mark_headquarters = L.icon({ iconUrl: './assets/icon/headquarters.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); //Headquarters
-var mark_palace = L.icon({ iconUrl: './assets/icon/palace.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Palace
-var mark_pumpkin = L.icon({ iconUrl: './assets/icon/pumpkin.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Pumpkin
-var mark_observatory = L.icon({ iconUrl: './assets/icon/observatory.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Observatory
-var mark_top = L.icon({ iconUrl: './assets/icon/top.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 			//Top of the World
-var mark_rocks = L.icon({ iconUrl: './assets/icon/rocks.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Rocks
-var mark_resort = L.icon({ iconUrl: './assets/icon/resort.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Resort
-var mark_dish = L.icon({ iconUrl: './assets/icon/dish.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Dish
-var mark_monorail = L.icon({ iconUrl: './assets/icon/monorail.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Monorail
-var mark_church = L.icon({ iconUrl: './assets/icon/church.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Church
-var mark_antiques = L.icon({ iconUrl: './assets/icon/antiques.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Antiques
+
+
+var mark_camp = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'camp', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Camp
+var mark_agcenter = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'agcenter', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Agricultural Center
+var mark_tree = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'tree', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Island
+var mark_disposal = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'disposal', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Ordinance/Disposal
+var mark_houses = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'houses', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Houses
+var mark_city = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'city', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//City
+var mark_pub = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pub', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'});			//Pub
+var mark_dam = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dam', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 			//Dam
+var mark_mine = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'mine', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Mine
+var mark_arktos = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'arktos', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Arktos
+var mark_golf = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'golf', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Golf
+var mark_snow = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'snow', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Snow
+var mark_vendorsnow = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'snow', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Snow-Vendor
+var mark_base = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'base', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Military base
+var mark_hotdog = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'hotdog', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Hotdog
+var mark_dock = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dock', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'});  		//Dock
+var mark_cemetery = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cemetery', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Cemetery
+var mark_scraper = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'scraper', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_lo'}); 		//SkyScraper
+var mark_vendorscraper = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'scraper', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_vendor'}); //SkyScraper-Vendor
+var mark_mansion = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'mansion', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Sugarmaple
+var mark_raider = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'raider', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Raider
+var mark_prison =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'prison', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Prison
+var mark_pond = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pond', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Pond
+var mark_statue = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'statue', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Statue
+var mark_spacestation = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'spacestation', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); //Spacestation
+var mark_fort = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fort', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fort
+var mark_quarry = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'quarry', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Quarry
+var mark_bunker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'bunker', glyphSize: '22px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Bunker
+var mark_vendorbunker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'bunker', glyphSize: '22px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Bunker-Vendor
+var mark_rocket = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'rocket', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Rocket
+var mark_headquarters = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'headquarters', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); //Headquarters
+var mark_palace = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'palace', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Palace
+var mark_pumpkin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pumpkin', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Pumpkin
+var mark_observatory = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'observatory', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Observatory
+var mark_top = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'top', glyphSize: '40px', glyphAnchor: [0,0], className:'mark_lo'}); 			//Top of the World
+var mark_rocks = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'rocks', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Rocks
+var mark_resort = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'resort', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Resort
+var mark_dish =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dish', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Dish
+var mark_monorail = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'monorail', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Monorail
+var mark_church = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'church', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Church
+var mark_antiques = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'antiques', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Antiques
+
+//var mark_camp = L.icon({ iconUrl: './assets/icon/camp.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Camp
+//var mark_agcenter = L.icon({ iconUrl: './assets/icon/agcenter.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Agricultural Center
+//var mark_tree = L.icon({ iconUrl: './assets/icon/tree.svg', iconSize: [26,32], className:'mark_lo svgmarker'}); 		//Island
+//var mark_disposal = L.icon({ iconUrl: './assets/icon/disposal.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Ordinance/Disposal
+//var mark_houses = L.icon({ iconUrl: './assets/icon/houses.svg', iconSize: [32,30], className:'mark_lo svgmarker'}); 		//Houses
+//var mark_city = L.icon({ iconUrl: './assets/icon/city.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//City
+//var mark_pub = L.icon({ iconUrl: './assets/icon/pub.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 			//Pub
+//var mark_dam = L.icon({ iconUrl: './assets/icon/dam.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 			//Dam
+//var mark_mine = L.icon({ iconUrl: './assets/icon/mine.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Mine
+//var mark_arktos = L.icon({ iconUrl: './assets/icon/arktos.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Arktos
+//var mark_golf = L.icon({ iconUrl: './assets/icon/golf.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Golf
+//var mark_snow = L.icon({ iconUrl: './assets/icon/snow.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Snow
+//var mark_vendorsnow = L.icon({ iconUrl: './assets/icon/snow.svg', iconSize: [32,32], className:'mark_vendor svgmarker'}); 	//Snow-Vendor
+//var mark_base = L.icon({ iconUrl: './assets/icon/base.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Military base
+//var mark_hotdog = L.icon({ iconUrl: './assets/icon/hotdog.svg', iconSize: [35,21], className:'mark_lo svgmarker'}); 		//Hotdog
+//var mark_dock = L.icon({ iconUrl: './assets/icon/dock.svg', iconSize: [32,28], className:'mark_lo svgmarker'}); 		//Dock
+//var mark_cemetery = L.icon({ iconUrl: './assets/icon/cemetery.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Cemetery
+//var mark_scraper = L.icon({ iconUrl: './assets/icon/scraper.svg', iconSize: [20,32], className:'mark_lo svgmarker'}); 		//SkyScraper
+//var mark_vendorscraper = L.icon({ iconUrl: './assets/icon/scraper.svg', iconSize: [20,32], className:'mark_vendor svgmarker'}); //SkyScraper-Vendor
+//var mark_mansion = L.icon({ iconUrl: './assets/icon/mansion.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Sugarmaple
+//var mark_raider = L.icon({ iconUrl: './assets/icon/raider.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Raider
+//var mark_prison = L.icon({ iconUrl: './assets/icon/prison.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Prison
+//var mark_pond = L.icon({ iconUrl: './assets/icon/pond.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Pond
+//var mark_statue = L.icon({ iconUrl: './assets/icon/statue.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Statue
+//var mark_spacestation = L.icon({ iconUrl: './assets/icon/spacestation.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); //Spacestation
+//var mark_fort = L.icon({ iconUrl: './assets/icon/fort.svg', iconSize: [32,22], className:'mark_lo svgmarker'}); 		//Fort
+//var mark_quarry = L.icon({ iconUrl: './assets/icon/quarry.svg', iconSize: [32,30], className:'mark_lo svgmarker'}); 		//Quarry
+//var mark_bunker = L.icon({ iconUrl: './assets/icon/bunker.svg', iconSize: [32,19], className:'mark_lo svgmarker'}); 		//Bunker
+//var mark_vendorbunker = L.icon({ iconUrl: './assets/icon/bunker.svg', iconSize: [32,19], className:'mark_vendor svgmarker'}); 	//Bunker-Vendor
+//var mark_rocket = L.icon({ iconUrl: './assets/icon/rocket.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Rocket
+//var mark_headquarters = L.icon({ iconUrl: './assets/icon/headquarters.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); //Headquarters
+//var mark_palace = L.icon({ iconUrl: './assets/icon/palace.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Palace
+//var mark_pumpkin = L.icon({ iconUrl: './assets/icon/pumpkin.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Pumpkin
+//var mark_observatory = L.icon({ iconUrl: './assets/icon/observatory.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Observatory
+//var mark_top = L.icon({ iconUrl: './assets/icon/top.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 			//Top of the World
+//var mark_rocks = L.icon({ iconUrl: './assets/icon/rocks.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Rocks
+//var mark_resort = L.icon({ iconUrl: './assets/icon/resort.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Resort
+//var mark_dish = L.icon({ iconUrl: './assets/icon/dish.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Dish
+//var mark_monorail = L.icon({ iconUrl: './assets/icon/monorail.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Monorail
+//var mark_church = L.icon({ iconUrl: './assets/icon/church.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Church
+//var mark_antiques = L.icon({ iconUrl: './assets/icon/antiques.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 	//Antiques
+
 
 //Let's set our icon colors, single place to swap them...
 var color_po = 'steelblue'; 	//Power Armor
@@ -227,7 +294,6 @@ function tooltipMapTemplate(title,img,text='') {
     L.marker(rc.unproject([2609,1107]), {icon: mark_wr, title: "Dolly Sods Campground", riseOnHover: true}).bindTooltip(tooltipTemplate("Dolly Sods Campground")).addTo(ol_wb);
     L.marker(rc.unproject([2821,2290]), {icon: mark_wr, title: "Abandoned Bog Town", riseOnHover: true}).bindTooltip(tooltipTemplate("Abandoned Bog Town")).addTo(ol_wb);
     L.marker(rc.unproject([204,2552]), {icon: mark_wr, title: "Beckley Mine Exhibit", riseOnHover: true}).bindTooltip(tooltipTemplate("Beckley Mine Exhibit",0,0,1)).addTo(ol_wb);
-
 
 //The Forest
     L.marker(rc.unproject([778,1035]), {icon: mark_shack, title: "Moonshiner's Shack", riseOnHover: true}).bindTooltip(tooltipTemplate("Moonshiner's Shack")).addTo(ol_loc);
