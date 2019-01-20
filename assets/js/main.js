@@ -46,16 +46,17 @@ map.setView(rc.unproject([805,975]),3)
 
 
 var mark_tr = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'trainstation', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Train Station
-//var mark_wr =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'workbench', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_wr'}); 	//Public Workbench
+var mark_wr =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'workbench', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_wr'}); 	//Public Workbench
 var mark_va76 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault76', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault76
 var mark_va63 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault63', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault63
 var mark_va94 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault94', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault94
 var mark_va96 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault96', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault96
 var mark_va = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 		//Vault
+var mark_parmor = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'parmor', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_parmor'}); //Power Armor
 var mark_rift = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fissure', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_rift'}); 	//Fissure
 
 //var mark_tr = L.icon({ iconUrl: './assets/icon/trainstation.svg', iconSize: [32,28], className:'mark_vendor svgmarker'}); 	//Train Station
-var mark_wr = L.icon({ iconUrl: './assets/icon/workbench.svg', iconSize: [32,32], className:'mark_wr svgmarker'}); 	//Public Workbench
+//var mark_wr = L.icon({ iconUrl: './assets/icon/workbench.svg', iconSize: [32,32], className:'mark_wr svgmarker'}); 	//Public Workbench
 //var mark_va = L.icon({ iconUrl: './assets/icon/vault.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 		//Vault
 //var mark_va76 = L.icon({ iconUrl: './assets/icon/vault76.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault76
 //var mark_va63 = L.icon({ iconUrl: './assets/icon/vault63.svg', iconSize: [32,32], className:'mark_va svgmarker'}); 	//Vault63
@@ -64,7 +65,7 @@ var mark_wr = L.icon({ iconUrl: './assets/icon/workbench.svg', iconSize: [32,32]
 var mark_map = L.icon({ iconUrl: './assets/icon/map.svg', iconSize: [32,32], className:'mark_tm svgmarker'}); 		//Treasure Map
 var mark_tape = L.icon({ iconUrl: './assets/icon/holotape.svg', iconSize: [32,32], className:'mark_tape svgmarker'}); 	//Holotape
 var mark_fcore = L.icon({ iconUrl: './assets/icon/fcore.svg', iconSize: [32,32], className:'mark_fcore svgmarker'}); 	//Fusion Core
-var mark_parmor = L.icon({ iconUrl: './assets/icon/parmor.svg', iconSize: [32,32], className:'mark_parmor svgmarker'}); //Power Armor
+//var mark_parmor = L.icon({ iconUrl: './assets/icon/parmor.svg', iconSize: [32,32], className:'mark_parmor svgmarker'}); //Power Armor
 //var mark_rift = L.icon({ iconUrl: './assets/icon/fissure.svg', iconSize: [32,32], className:'mark_rift svgmarker'}); 	//Fissure
 
 var mark_farm = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
