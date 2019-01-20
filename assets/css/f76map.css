@@ -27,6 +27,12 @@
   content: "\e900";
   color: ;
 }
+.icon-holotape:before {
+  content: "\e901";
+}
+.icon-fcore:before {
+  content: "\e902";
+}
 .icon-waterplant:before {
   content: "\e903";
 }
