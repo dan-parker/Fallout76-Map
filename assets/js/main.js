@@ -222,51 +222,55 @@ function tooltipTemplate(title,bobblehead=0,magazine=0,capstash=0,recipe='') {
  	return result;
 }
 
-function tooltipMapTemplate(title,img,text='') {
+function tooltipMapTemplate(title,img='',text='') {
 	var result = '<div class="tooltip">';
  	result += '<div class="tooltitle">'+title+'</div>';
- 	result += '<div><img src="assets/img/treasure/' + img + '"/></div>';
+ 	if (img) result += '<div><img src="assets/img/treasure/' + img + '"/></div>';
  	if (text) result += '<div>' + text + '</div>';
 	result += '</div>';
  	return result;
 }
 
-    L.marker(rc.unproject([931,1914]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Wade Airport</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1617,1791]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>New Appalachian Central Trainyard</b>").addTo(ol_pa);
-    L.marker(rc.unproject([673,414]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Aaronholdt Homestead</b>").addTo(ol_pa);
-    L.marker(rc.unproject([918,118]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>The Crosshair</b>").addTo(ol_pa);
-    L.marker(rc.unproject([358,296]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>WV Lumber Co.</b>").addTo(ol_pa);
-    L.marker(rc.unproject([391,2001]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Kanawha Nuka Cola Plant</b>").addTo(ol_pa);
-    L.marker(rc.unproject([304,1133]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Point Pleasant</b><br>x2").addTo(ol_pa);
+    L.marker(rc.unproject([931,1914]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Wade Airport","","East of runway in a hangar")).addTo(ol_pa);
+    L.marker(rc.unproject([1617,1791]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("New Appalachian Central Trainyard","","Inside main building")).addTo(ol_pa);
+    L.marker(rc.unproject([673,414]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Aaronholdt Homestead","","Requires Lockpick1 or key (near awning on north side of field)<br>Shed next to granary silo, south of main buildings.")).addTo(ol_pa);
+    L.marker(rc.unproject([918,118]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("The Crosshair","","Under rock overhang by tower")).addTo(ol_pa);
+    L.marker(rc.unproject([358,296]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("WV Lumber Co.","","Large green shed closest to train tracks")).addTo(ol_pa);
+    L.marker(rc.unproject([391,2001]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Kanawha Nuka Cola Plant","","Loading Dock inside Plant")).addTo(ol_pa);
+    L.marker(rc.unproject([304,1133]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Point Pleasant","","Use the truck outside Bernardo's to access the roof, keep right")).addTo(ol_pa);
     L.marker(rc.unproject([469,853]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Black Mountain Ordnance Works</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1154,945]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Gorge Junkyard</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1300,1024]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Morgantown Trainyard</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1403,1069]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Mama Dolce's Food Processing</b><br>x2").addTo(ol_pa);
-    L.marker(rc.unproject([1600,793]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Grafton Dam</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1267,1283]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Arktos Pharma</b>").addTo(ol_pa);
-    L.marker(rc.unproject([442,1659]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Silva Homestead</b>").addTo(ol_pa);
-    L.marker(rc.unproject([550,1956]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Poseidon Energy Plant WV-06</b>").addTo(ol_pa);
-    L.marker(rc.unproject([326,1920]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Lewis & Sons Farming Supply</b>").addTo(ol_pa);
-    L.marker(rc.unproject([679,1687]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>New River Gorge Bridge - West</b>").addTo(ol_pa);
-    L.marker(rc.unproject([873,1958]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Wade Airport</b>").addTo(ol_pa);
-    L.marker(rc.unproject([780,1974]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Hornwright Industrial Headquarters</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1326,724]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Eastern Regional Penitentiary</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1377,448]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Clarksburg</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1565,328]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Black Bear Lodge</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1702,225]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Crashed Space Station</b>").addTo(ol_pa);
-    L.marker(rc.unproject([2283,341]), {icon: mark_parmor, title: 'Power Armorm', riseOnHover: true}).bindTooltip("<b>Power Armorii</b>").addTo(ol_pa);
-    L.marker(rc.unproject([751,2148]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>The Rusty Pick</b>").addTo(ol_pa);
-    L.marker(rc.unproject([216,2507]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Beckley</b>").addTo(ol_pa);
-    L.marker(rc.unproject([545,2430]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Abandoned Mine Shaft Elaine</b>").addTo(ol_pa);
-    L.marker(rc.unproject([590,2489]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Mount Blair Trainyard</b>").addTo(ol_pa);
-    L.marker(rc.unproject([610,2346]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Mount Blair</b>").addTo(ol_pa);
-    L.marker(rc.unproject([836,2436]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Rollins Work Camp</b>").addTo(ol_pa);
-    L.marker(rc.unproject([947,2343]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>The Burning Mine</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1246,2486]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Big Bend Tunnel West</b><br>x2").addTo(ol_pa);
-    L.marker(rc.unproject([664,2682]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>AMS Testing Site</b>").addTo(ol_pa);
-    L.marker(rc.unproject([751,2570]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Red Rocket Filling Station</b>").addTo(ol_pa);
-    L.marker(rc.unproject([758,2822]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Striker Row</b>").addTo(ol_pa);
-    L.marker(rc.unproject([1032,2762]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip("<b>Garrahan Mining Headquarters</b><br>x4").addTo(ol_pa);
+    L.marker(rc.unproject([1154,945]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Gorge Junkyard","","Requires Lockpick3<br>North side, inside green truck trailer")).addTo(ol_pa);
+    L.marker(rc.unproject([1300,1024]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Morgantown Trainyard","","East side under crane in a Gov't traincar")).addTo(ol_pa);
+    L.marker(rc.unproject([1403,1069]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Mama Dolce's Food Processing","","Two-story warehouse west of the factory with booby traps")).addTo(ol_pa);
+    L.marker(rc.unproject([1600,793]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Grafton Dam","","Metal storage shed by parking lot")).addTo(ol_pa);
+    L.marker(rc.unproject([1267,1283]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Arktos Pharma","","Behind security gate locked terminal")).addTo(ol_pa);
+    L.marker(rc.unproject([442,1659]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Silva Homestead","","Inside silo barn")).addTo(ol_pa);
+    L.marker(rc.unproject([550,1956]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Poseidon Energy Plant WV-06","","In basement")).addTo(ol_pa);
+    L.marker(rc.unproject([326,1920]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Lewis & Sons Farming Supply","","Left of the stairs by tractor barn")).addTo(ol_pa);
+    L.marker(rc.unproject([679,1687]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("New River Gorge Bridge - West","","Requires Key (Found at Camden Park rollercoaster)<br>Under bridge")).addTo(ol_pa);
+    L.marker(rc.unproject([873,1958]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Wade Airport","","Inside booby trapped, locked blue trailer")).addTo(ol_pa);
+    L.marker(rc.unproject([780,1974]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Hornwright Industrial Headquarters","","Bottom of basement stairs next to vending machines")).addTo(ol_pa);
+    L.marker(rc.unproject([1326,724]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Eastern Regional Penitentiary","","Center of main yard in yellow building")).addTo(ol_pa);
+    L.marker(rc.unproject([1377,448]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Clarksburg","","3rd floor of red brick building, enter via roof and fire escape")).addTo(ol_pa);
+    L.marker(rc.unproject([1565,328]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Black Bear Lodge","","Inside red barn")).addTo(ol_pa);
+    L.marker(rc.unproject([1702,225]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Crashed Space Station","","Small shed on edge of crater")).addTo(ol_pa);
+    L.marker(rc.unproject([2283,341]), {icon: mark_parmor, title: 'Power Armorm', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Converted Munitions Factory","","Top floor, northern end store room")).addTo(ol_pa);
+    L.marker(rc.unproject([751,2148]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("The Rusty Pick","","In basement behind security gate")).addTo(ol_pa);
+    L.marker(rc.unproject([216,2507]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Beckley","","Southside of central wall, next to APC")).addTo(ol_pa);
+    L.marker(rc.unproject([545,2430]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Abandoned Mine Shaft Elaine","","Outside of locker room building")).addTo(ol_pa);
+    L.marker(rc.unproject([590,2489]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Mount Blair Trainyard","","Next to Tinker's Workbench")).addTo(ol_pa);
+    L.marker(rc.unproject([610,2346]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Mount Blair","","Inside large double garage warehouse")).addTo(ol_pa);
+    L.marker(rc.unproject([836,2436]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Rollins Work Camp","","Alongside orange and white trailer")).addTo(ol_pa);
+    L.marker(rc.unproject([947,2343]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("The Burning Mine","","Garage outside of mine")).addTo(ol_pa);
+    L.marker(rc.unproject([1246,2486]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Big Bend Tunnel West","","Derailed traincar between this and Lewisburg station<br>Inside the warehouse")).addTo(ol_pa);
+    L.marker(rc.unproject([664,2682]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("AMS Testing Site","","Inside curved roof warehouse")).addTo(ol_pa);
+    L.marker(rc.unproject([751,2570]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Red Rocket Filling Station","","behind Red Rocket")).addTo(ol_pa);
+    L.marker(rc.unproject([758,2822]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Striker Row","","southeast of RV and flag")).addTo(ol_pa);
+    L.marker(rc.unproject([1032,2762]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Garrahan Mining Headquarters","","In Testing Control, in basement")).addTo(ol_pa);
+    L.marker(rc.unproject([724,2214]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Belching Betty","","Outside entrance in concrete hut")).addTo(ol_pa);
+    L.marker(rc.unproject([1845,669]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Site Bravo","","In storage area")).addTo(ol_pa);
+    L.marker(rc.unproject([2159,1264]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Seneca Gang Camp","","Near cooking station")).addTo(ol_pa);
+    L.marker(rc.unproject([1550,1699]), {icon: mark_parmor, title: 'Power Armor', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Cliffwatch","","Railcar")).addTo(ol_pa);
 
 
 //Vaults
