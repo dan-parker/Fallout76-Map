@@ -137,7 +137,8 @@ html,body {height:100%;margin:0px;}
 
 .icon {
   opacity: 0.8;
-  text-shadow: 3px 3px 2px #000000;
+ /* text-shadow: 3px 3px 2px #000000; */
+  text-shadow: -1px -1px 0 #222, 1px -1px 0 #222, -1px 1px 0 #222, 1px 1px 0 #222, 3px 3px 2px #000000;*/ Let's mimic -webkit-text-stroke, and have our overall dropshadow */
 }
 .icon:hover {
   opacity: 1.0;
