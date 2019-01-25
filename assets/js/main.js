@@ -45,7 +45,7 @@ map.setMaxZoom(4)
 map.setView(rc.unproject([805,975]),2)
 
 
-var mark_tr = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'trainstation', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Train Station
+var mark_tr = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'trainstation', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Train Station
 var mark_wr =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'workbench', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_wr'}); 	//Public Workbench
 var mark_va76 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault76', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault76
 var mark_va63 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault63', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault63
@@ -70,75 +70,75 @@ var mark_map = L.icon({ iconUrl: './assets/icon/map.svg', iconSize: [32,32], cla
 //var mark_parmor = L.icon({ iconUrl: './assets/icon/parmor.svg', iconSize: [32,32], className:'mark_parmor svgmarker'}); //Power Armor
 //var mark_rift = L.icon({ iconUrl: './assets/icon/fissure.svg', iconSize: [32,32], className:'mark_rift svgmarker'}); 	//Fissure
 
-var mark_farm = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
-var mark_cabin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cabin', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'});  		//Farm/Cabin
+var mark_farm = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
+var mark_cabin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cabin', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'});  		//Farm/Cabin
 var mark_lighthouse = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lighthouse', glyphColor: '',glyphSize: '36px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Lighthouse
-var mark_shack = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'shack', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Shack/Lab
+var mark_shack = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'shack', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Shack/Lab
 var mark_radiotower = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'radiotower', glyphColor: '', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Relay Tower
-var mark_lookout = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphColor: '', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lookout
-var mark_factory = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'factory', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lumberyard
-var mark_fair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fair
-var mark_vendorfair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Fair-Vendor
-var mark_waterplant = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'waterplant', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Water Treatment
-var mark_substation = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'substation', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Substation
-var mark_town = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'town', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Town
-var mark_vendortown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'town', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Town-Vendor
-var mark_plane = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'plane', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Plane/Airport
-var mark_vendorplane = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'plane', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Plane/Airport-Vendor
-var mark_manor = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'manor', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Manor
+var mark_lookout = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphColor: '', glyphSize: '34px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lookout
+var mark_factory = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'factory', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lumberyard
+var mark_fair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fair
+var mark_vendorfair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Fair-Vendor
+var mark_waterplant = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'waterplant', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Water Treatment
+var mark_substation = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'substation', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Substation
+var mark_town = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'town', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Town
+var mark_vendortown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'town', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Town-Vendor
+var mark_plane = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'plane', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Plane/Airport
+var mark_vendorplane = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'plane', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Plane/Airport-Vendor
+var mark_manor = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'manor', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Manor
 var mark_nuka =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'nuka', glyphColor: '', glyphSize: '38px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Nuka
 var mark_power = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'power', glyphColor: '', glyphSize: '34px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Power Plant
-var mark_railyard = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'railyard', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Railyard
-var mark_trainyard = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'trainyard', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Trainyard
-var mark_perch = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'perch', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Perch
-var mark_lodge = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'firedept', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fire Dept/Lodge
-var mark_vendorlodge = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'firedept', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Fire Dept/Lodge-Vendor
-var mark_med = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'med', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 			//Medical
+var mark_railyard = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'railyard', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Railyard
+var mark_trainyard = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'trainyard', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Trainyard
+var mark_perch = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'perch', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Perch
+var mark_lodge = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'firedept', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fire Dept/Lodge
+var mark_vendorlodge = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'firedept', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Fire Dept/Lodge-Vendor
+var mark_med = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'med', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 			//Medical
 var mark_capital = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'capital', glyphColor: '', glyphSize: '34px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Capital
-var mark_teapot = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'teapot', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Teapot
-var mark_cream = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cream', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Cream
+var mark_teapot = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'teapot', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Teapot
+var mark_cream = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cream', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Cream
 var mark_bridge = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'bridge', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Bridge
-var mark_camp = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'camp', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Camp
+var mark_camp = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'camp', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Camp
 var mark_agcenter = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'agcenter', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Agricultural Center
-var mark_tree = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'tree', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Island
-var mark_disposal = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'disposal', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Ordinance/Disposal
-var mark_houses = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'houses', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Houses
-var mark_city = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'city', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//City
-var mark_pub = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pub', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'});			//Pub
-var mark_dam = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dam', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 			//Dam
-var mark_mine = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'mine', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Mine
-var mark_arktos = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'arktos', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Arktos
-var mark_golf = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'golf', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Golf
-var mark_snow = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'snow', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Snow
-var mark_vendorsnow = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'snow', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Snow-Vendor
-var mark_base = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'base', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Military base
-var mark_hotdog = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'hotdog', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Hotdog
+var mark_tree = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'tree', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Island
+var mark_disposal = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'disposal', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Ordinance/Disposal
+var mark_houses = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'houses', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Houses
+var mark_city = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'city', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//City
+var mark_pub = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pub', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'});			//Pub
+var mark_dam = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dam', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 			//Dam
+var mark_mine = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'mine', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Mine
+var mark_arktos = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'arktos', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Arktos
+var mark_golf = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'golf', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Golf
+var mark_snow = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'snow', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Snow
+var mark_vendorsnow = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'snow', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Snow-Vendor
+var mark_base = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'base', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Military base
+var mark_hotdog = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'hotdog', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Hotdog
 var mark_dock = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dock', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'});  		//Dock
 var mark_cemetery = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cemetery', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Cemetery
-var mark_scraper = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'scraper', glyphColor: '', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_lo'}); 		//SkyScraper
+var mark_scraper = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'scraper', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//SkyScraper
 var mark_vendorscraper = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'scraper', glyphColor: '', glyphSize: '36px', glyphAnchor: [0,0], className:'mark_vendor'}); //SkyScraper-Vendor
-var mark_mansion = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'mansion', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Sugarmaple
-var mark_raider = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'raider', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Raider
-var mark_prison =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'prison', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Prison
-var mark_pond = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pond', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Pond
-var mark_statue = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'statue', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Statue
+var mark_mansion = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'mansion', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Sugarmaple
+var mark_raider = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'raider', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Raider
+var mark_prison =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'prison', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Prison
+var mark_pond = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pond', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Pond
+var mark_statue = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'statue', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Statue
 var mark_spacestation = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'spacestation', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); //Spacestation
 var mark_fort = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fort', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fort
-var mark_quarry = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'quarry', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Quarry
-var mark_bunker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'bunker', glyphColor: '', glyphSize: '22px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Bunker
-var mark_vendorbunker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'bunker', glyphColor: '', glyphSize: '22px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Bunker-Vendor
-var mark_rocket = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'rocket', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Rocket
-var mark_headquarters = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'headquarters', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); //Headquarters
-var mark_palace = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'palace', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Palace
-var mark_pumpkin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pumpkin', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Pumpkin
-var mark_observatory = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'observatory', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Observatory
+var mark_quarry = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'quarry', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Quarry
+var mark_bunker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'bunker', glyphColor: '', glyphSize: '18px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Bunker
+var mark_vendorbunker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'bunker', glyphColor: '', glyphSize: '18px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Bunker-Vendor
+var mark_rocket = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'rocket', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Rocket
+var mark_headquarters = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'headquarters', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); //Headquarters
+var mark_palace = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'palace', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Palace
+var mark_pumpkin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pumpkin', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Pumpkin
+var mark_observatory = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'observatory', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Observatory
 var mark_top = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'top', glyphColor: '', glyphSize: '40px', glyphAnchor: [0,0], className:'mark_lo'}); 			//Top of the World
 var mark_rocks = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'rocks', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Rocks
-var mark_resort = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'resort', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Resort
-var mark_dish =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dish', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Dish
-var mark_monorail = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'monorail', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Monorail
-var mark_church = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'church', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Church
-var mark_antiques = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'antiques', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Antiques
+var mark_resort = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'resort', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Resort
+var mark_dish =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dish', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Dish
+var mark_monorail = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'monorail', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Monorail
+var mark_church = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'church', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Church
+var mark_antiques = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'antiques', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Antiques
 
 //var mark_farm = L.icon({ iconUrl: './assets/icon/farm.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Farm/Homestead
 //var mark_cabin = L.icon({ iconUrl: './assets/icon/cabin.svg', iconSize: [32,32], className:'mark_lo svgmarker'}); 		//Farm/Cabin
@@ -502,20 +502,20 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([2053,1513]), {icon: mark_lookout, title: "Central Mountain Lookout", riseOnHover: true}).bindTooltip("<b>Central Mountain Lookout</b>").addTo(ol_loc);
     L.marker(rc.unproject([2147,1494]), {icon: mark_hotdog, title: "Yellow Sandy's Still", riseOnHover: true}).bindTooltip("<b>Yellow Sandy's Still</b>").addTo(ol_loc);
     L.marker(rc.unproject([1524,1707]), {icon: mark_perch, title: "Cliffwatch", riseOnHover: true}).bindTooltip("<b>Cliffwatch</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1624,1878]), {icon: mark_disposal, title: "Safe 'N Clean Disposal", riseOnHover: true}).bindTooltip("<b>Safe 'N Clean Disposal</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1635,1865]), {icon: mark_disposal, title: "Safe 'N Clean Disposal", riseOnHover: true}).bindTooltip("<b>Safe 'N Clean Disposal</b>").addTo(ol_loc);
     L.marker(rc.unproject([1633,1793]), {icon: mark_trainyard, title: "New Appalachian Central Trainyard", riseOnHover: true}).bindTooltip("<b>New Appalachian Central Trainyard</b>").addTo(ol_loc);
     L.marker(rc.unproject([1702,1691]), {icon: mark_trainyard, title: "98 NAR Regional", riseOnHover: true}).bindTooltip("<b>98 NAR Regional</b>").addTo(ol_loc);
     L.marker(rc.unproject([1866,1707]), {icon: mark_farm, title: "Beckwith Farm", riseOnHover: true}).bindTooltip("<b>Beckwith Farm</b>").addTo(ol_loc);
     L.marker(rc.unproject([1947,1759]), {icon: mark_shack, title: "Big Fred's BBQ Shack", riseOnHover: true}).bindTooltip("<b>Big Fred's BBQ Shack</b>").addTo(ol_loc);
     L.marker(rc.unproject([2081,1726]), {icon: mark_base, title: "Site Alpha", riseOnHover: true}).bindTooltip("<b>Site Alpha</b>").addTo(ol_loc);
     L.marker(rc.unproject([1357,2015]), {icon: mark_lookout, title: "Whitespring Lookout", riseOnHover: true}).bindTooltip("<b>Whitespring Lookout</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1427,1985]), {icon: mark_golf, title: "Whitespring Golf Club", riseOnHover: true}).bindTooltip("<b>Whitespring Golf Club</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1598,1989]), {icon: mark_resort, title: "Whitespring Resort", riseOnHover: true}).bindTooltip("<b>Whitespring Resort</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1455,1988]), {icon: mark_golf, title: "Whitespring Golf Club", riseOnHover: true}).bindTooltip("<b>Whitespring Golf Club</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1590,2000]), {icon: mark_resort, title: "Whitespring Resort", riseOnHover: true}).bindTooltip("<b>Whitespring Resort</b>").addTo(ol_loc);
     L.marker(rc.unproject([1598,2035]), {icon: mark_lodge, title: "Whitespring Service Entrance", riseOnHover: true}).bindTooltip("<b>Whitespring Service Entrance</b>").addTo(ol_loc);
     L.marker(rc.unproject([1571,2086]), {icon: mark_vendorbunker, title: "Whitespring Bunker (Enclave)", riseOnHover: true}).bindTooltip("<b>Whitespring Bunker (Enclave)</b>").addTo(ol_loc);
 //
-    L.marker(rc.unproject([1693,2055]), {icon: mark_substation, title: "Monongah Power Substation MZ-02", riseOnHover: true}).bindTooltip("<b>Monongah Power Substation MZ-02</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1704,1956]), {icon: mark_mine, title: "Blackwater Mine", riseOnHover: true}).bindTooltip("<b>Blackwater Mine</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1698,2010]), {icon: mark_substation, title: "Monongah Power Substation MZ-02", riseOnHover: true}).bindTooltip("<b>Monongah Power Substation MZ-02</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1740,1956]), {icon: mark_quarry, title: "Blackwater Mine", riseOnHover: true}).bindTooltip("<b>Blackwater Mine</b>").addTo(ol_loc);
     L.marker(rc.unproject([1848,1906]), {icon: mark_cabin, title: "Middle Mountain Cabins", riseOnHover: true}).bindTooltip("<b>Middle Mountain Cabins</b>").addTo(ol_loc);
     L.marker(rc.unproject([1924,2007]), {icon: mark_disposal, title: "Emmett Mountain Disposal Site", riseOnHover: true}).bindTooltip("<b>Emmett Mountain Disposal Site</b>").addTo(ol_loc);
     L.marker(rc.unproject([2051,2099]), {icon: mark_raider, title: "Ripper Alley", riseOnHover: true}).bindTooltip("<b>Ripper Alley</b>").addTo(ol_loc);
@@ -526,10 +526,10 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([2231,2044]), {icon: mark_base, title: "US-13C Bivouac", riseOnHover: true}).bindTooltip("<b>US-13C Bivouac</b>").addTo(ol_loc);
     L.marker(rc.unproject([2346,2057]), {icon: mark_lookout, title: "East Mountain Lookout", riseOnHover: true}).bindTooltip("<b>East Mountain Lookout</b>").addTo(ol_loc);
     L.marker(rc.unproject([1600,2325]), {icon: mark_shack, title: "Mountainside Bed & Breakfast", riseOnHover: true}).bindTooltip("<b>Mountainside Bed & Breakfast</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1675,2127]), {icon: mark_perch, title: "The Vantage", riseOnHover: true}).bindTooltip("<b>The Vantage</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1807,2090]), {icon: mark_pond, title: "Solomon's Pond", riseOnHover: true}).bindTooltip("<b>Solomon's Pond</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1869,2174]), {icon: mark_pond, title: "Twin Lakes", riseOnHover: true}).bindTooltip("<b>Twin Lakes</b>").addTo(ol_loc);
-    L.marker(rc.unproject([1923,2116]), {icon: mark_cabin, title: "Investigator's Cabin", riseOnHover: true}).bindTooltip("<b>Investigator's Cabin</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1705,2110]), {icon: mark_perch, title: "The Vantage", riseOnHover: true}).bindTooltip("<b>The Vantage</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1820,2085]), {icon: mark_pond, title: "Solomon's Pond", riseOnHover: true}).bindTooltip("<b>Solomon's Pond</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1880,2185]), {icon: mark_pond, title: "Twin Lakes", riseOnHover: true}).bindTooltip("<b>Twin Lakes</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1940,2110]), {icon: mark_cabin, title: "Investigator's Cabin", riseOnHover: true}).bindTooltip("<b>Investigator's Cabin</b>").addTo(ol_loc);
     L.marker(rc.unproject([1968,2279]), {icon: mark_town, title: "Huntersville", riseOnHover: true}).bindTooltip("<b>Huntersville</b>").addTo(ol_loc);
     L.marker(rc.unproject([2109,2258]), {icon: mark_rocks, title: "Devil's Backbone", riseOnHover: true}).bindTooltip("<b>Devil's Backbone</b>").addTo(ol_loc);
     L.marker(rc.unproject([2121,2336]), {icon: mark_raider, title: "The Freak Show", riseOnHover: true}).bindTooltip("<b>The Freak Show</b>").addTo(ol_loc);
@@ -645,7 +645,7 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([482,2547]), {icon: mark_tr, title: "Welch Station (Responders)", riseOnHover: true}).bindTooltip("<b>Welch Station (Responders)</b>").addTo(ol_train);
     L.marker(rc.unproject([2043,718]), {icon: mark_tr, title: "Sunnytop Station (Raiders)", riseOnHover: true}).bindTooltip("<b>Sunnytop Station (Raiders)</b>").addTo(ol_train);
     L.marker(rc.unproject([1865,1570]), {icon: mark_tr, title: "Pleasant Valley Station (Raiders)", riseOnHover: true}).bindTooltip("<b>Pleasant Valley Station (Raiders)</b>").addTo(ol_train);
-    L.marker(rc.unproject([1657,1945]), {icon: mark_tr, title: "Whitespring Station (Whitespring)", riseOnHover: true}).bindTooltip("<b>Whitespring Station (Whitespring)</b>").addTo(ol_train);
+    L.marker(rc.unproject([1680,1958]), {icon: mark_tr, title: "Whitespring Station (Whitespring)", riseOnHover: true}).bindTooltip("<b>Whitespring Station (Whitespring)</b>").addTo(ol_train);
     L.marker(rc.unproject([1575,2577]), {icon: mark_tr, title: "R&G Station (Raiders)", riseOnHover: true}).bindTooltip("<b>R&G Station (Raiders)</b>").addTo(ol_train);
     L.marker(rc.unproject([2583,2693]), {icon: mark_tr, title: "Watoga Station (Unique)", riseOnHover: true}).bindTooltip("<b>Watoga Station (Unique)</b>").addTo(ol_train);
 
