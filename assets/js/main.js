@@ -19,11 +19,12 @@ var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
 
 // create the map
 var map = L.map('mapid', {
-  layers: [baselayer, ol_locv,ol_vault,ol_loc,ol_train,ol_wb],
+  layers: [baselayer, ol_locv,ol_vault,ol_loc,ol_train,ol_wb,ol_rift],
   fullscreenControl: true,
   fullscreenControlOptions: {
     position: 'topleft'
   },
+  preferCanvas: true,
   renderer: L.canvas()
 });
 
@@ -698,13 +699,32 @@ function tooltipMapTemplate(title,img='',text='') {
 
 //Holotapes
     L.marker(rc.unproject([1604,817]), {icon: mark_tape, title: "Grognak & The Ruby Ruins", riseOnHover: true}).bindTooltip("<b>Holotape Game:</b> Grognak & The Ruby Ruins").addTo(ol_tape);
-    L.marker(rc.unproject([815,950]), {icon: mark_tape, title: "Nuka Tapper, Overseer's Log - Vault 76", riseOnHover: true}).bindTooltip("<b>Holotape Game:</b> Nuka Tapper<br><b>Overseer's Log:</b> Vault 76").addTo(ol_tape);
-    L.marker(rc.unproject([973,1308]), {icon: mark_tape, title: "Overseer's Log - C.A.M.P.", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> C.A.M.P.").addTo(ol_tape);
-    L.marker(rc.unproject([786,1466]), {icon: mark_tape, title: "Overseer's Log - Flatwoods", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Flatwoods").addTo(ol_tape);
-    L.marker(rc.unproject([797,2112]), {icon: mark_tape, title: "Overseer's Log - Firehouse", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Firehouse").addTo(ol_tape);
-    L.marker(rc.unproject([1011,1713]), {icon: mark_tape, title: "Overseer's Log - Camp McClintock", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Camp McClintock").addTo(ol_tape);
+    L.marker(rc.unproject([815,950]), {icon: mark_tape, title: "Nuka Tapper", riseOnHover: true}).bindTooltip("<b>Holotape Game:</b> Nuka Tapper").addTo(ol_tape);
+
     L.marker(rc.unproject([699,1477]), {icon: mark_tape, title: "Overseer's Journal - Entry 1", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Entry 1").addTo(ol_tape);
     L.marker(rc.unproject([1131,1460]), {icon: mark_tape, title: "Overseer's Journal - Entry 2", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Entry 2").addTo(ol_tape);
+    L.marker(rc.unproject([1589,965]), {icon: mark_tape, title: "Overseer's Journal - Entry 3", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Entry 3").addTo(ol_tape);
+    L.marker(rc.unproject([1502,1056]), {icon: mark_tape, title: "Overseer's Journal - Entry 4", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Entry 4").addTo(ol_tape);
+    L.marker(rc.unproject([473,2585]), {icon: mark_tape, title: "Overseer's Journal - Entry 5", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Entry 5").addTo(ol_tape);
+    L.marker(rc.unproject([613,2342]), {icon: mark_tape, title: "Overseer's Journal - Entry 6", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Entry 6").addTo(ol_tape);
+    L.marker(rc.unproject([782,947]), {icon: mark_tape, title: "Overseer's Log - Vault 76", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Vault 76").addTo(ol_tape);
+    L.marker(rc.unproject([973,1308]), {icon: mark_tape, title: "Overseer's Log - C.A.M.P.", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> C.A.M.P.").addTo(ol_tape);
+    L.marker(rc.unproject([786,1466]), {icon: mark_tape, title: "Overseer's Log - Flatwoods", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Flatwoods").addTo(ol_tape);
+    L.marker(rc.unproject([1430,911]), {icon: mark_tape, title: "Overseer's Log - Morgantown", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Morgantown").addTo(ol_tape);
+    L.marker(rc.unproject([797,2112]), {icon: mark_tape, title: "Overseer's Log - Firehouse", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Firehouse").addTo(ol_tape);
+    L.marker(rc.unproject([1783,1538]), {icon: mark_tape, title: "Overseer's Journal - Top of the World", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Top of the World").addTo(ol_tape);
+    L.marker(rc.unproject([2847,662]), {icon: mark_tape, title: "Overseer's Journal - Free States", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Free States").addTo(ol_tape);
+    L.marker(rc.unproject([2645,1915]), {icon: mark_tape, title: "Overseer's Journal - Camp Venture", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Camp Venture").addTo(ol_tape);
+    L.marker(rc.unproject([2297,2573]), {icon: mark_tape, title: "Overseer's Log - Allegheny", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Allegheny").addTo(ol_tape);
+    L.marker(rc.unproject([1011,1713]), {icon: mark_tape, title: "Overseer's Log - Camp McClintock", riseOnHover: true}).bindTooltip("<b>Overseer's Log:</b> Camp McClintock").addTo(ol_tape);
+    L.marker(rc.unproject([940,2045]), {icon: mark_tape, title: "Overseer's Journal - Charleston", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Charleston").addTo(ol_tape);
+    L.marker(rc.unproject([2257,2544]), {icon: mark_tape, title: "Overseer's Journal - Fort Defiance", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Fort Defiance").addTo(ol_tape);
+    L.marker(rc.unproject([1193,593]), {icon: mark_tape, title: "Overseer's Journal - Grafton", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Grafton").addTo(ol_tape);
+    L.marker(rc.unproject([2095,1715]), {icon: mark_tape, title: "Overseer's Journal - Site Alpha", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Site Alpha").addTo(ol_tape);
+    L.marker(rc.unproject([1843,666]), {icon: mark_tape, title: "Overseer's Journal - Site Bravo", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Site Bravo").addTo(ol_tape);
+    L.marker(rc.unproject([15643,2428]), {icon: mark_tape, title: "Overseer's Journal - Site Charlie", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Site Charlie").addTo(ol_tape);
+    L.marker(rc.unproject([1622,2326]), {icon: mark_tape, title: "Overseer's Journal - Mountainside", riseOnHover: true}).bindTooltip("<b>Overseer's Journal:</b> Mountainside").addTo(ol_tape);
+
     L.marker(rc.unproject([1283,1272]), {icon: mark_tape, title: "Test Log - 9-23-77-A10, Test Log - 3-12-78-A14", riseOnHover: true }).bindTooltip("<b>Test Log:</b> 9-23-77-A10<br><b>Test Log:</b> 3-12-78-A14").addTo(ol_tape);
 
 //Rift
