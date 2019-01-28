@@ -732,7 +732,7 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([2615,355]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
     L.marker(rc.unproject([2438,1112]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
     L.marker(rc.unproject([2603,2107]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
-    L.marker(rc.unproject([2891,2804]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
+    L.marker(rc.unproject([2891,2804]), {icon: mark_rift, title: "Fissure Prime", riseOnHover: true}).bindTooltip("<b>Fissure Prime</b>").addTo(ol_rift);
     L.marker(rc.unproject([2764,2756]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
     L.marker(rc.unproject([1953,2701]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
     L.marker(rc.unproject([1260,2122]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
