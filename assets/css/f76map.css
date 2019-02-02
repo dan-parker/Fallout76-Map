@@ -252,3 +252,9 @@
 .icon-map:before {
   content: "\e94b";
 }
+.icon-enclave:before {
+  content: "\e94c";
+}
+.icon-responders:before {
+  content: "\e94d";
+}
