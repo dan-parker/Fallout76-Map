@@ -244,12 +244,11 @@
   content: "\e948";
 }
 .icon-freestate:before {
-
   content: "\e949";
-
 }
 .icon-bos:before {
-
   content: "\e94a";
-
+}
+.icon-map:before {
+  content: "\e94b";
 }
