@@ -389,7 +389,7 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([1106,2037]), {icon: mark_manor, title: 'Burdette Manor', riseOnHover: true}).bindTooltip("<b>Burdette Manor</b><br>Bobblehead x2<br>Magazine x2<br>Cap Stash x1<br>Recipe/Plan").addTo(ol_loc);
     L.marker(rc.unproject([1163,1993]), {icon: mark_mansion, title: 'Sugarmaple', riseOnHover: true}).bindTooltip("<b>Sugarmaple</b><br>Cap Stash x1").addTo(ol_loc);
     L.marker(rc.unproject([1187,1960]), {icon: mark_cabin, title: 'Overlook Cabin', riseOnHover: true}).bindTooltip("<b>Overlook Cabin</b><br>Bobblehead x2<br>Magazine x2<br>Cap Stash x3<br>Recipe/Plan").addTo(ol_loc);
-    L.marker(rc.unproject([1045,2127]), {icon: mark_manor, title: 'Riverside Manor', riseOnHover: true}).bindTooltip("<b>Riverside Manor</b><br>Bobblehead x2<br>Magazine x4<br>Cap Stash x7").addTo(ol_loc);
+    L.marker(rc.unproject([1045,2127]), {icon: mark_manor, title: 'Riverside Manor', riseOnHover: true}).bindTooltip(tooltipTemplate('<span class="icon-mysteries"></span> Riverside Manor',2,4,7)).addTo(ol_loc);
     L.marker(rc.unproject([1155,2068]), {icon: mark_manor, title: 'Torrance House', riseOnHover: true}).bindTooltip("<b>Torrance House</b><br>Bobblehead x2<br>Magazine x2").addTo(ol_loc);
     L.marker(rc.unproject([1208,2018]), {icon: mark_manor, title: 'Hornwright Summer Villa', riseOnHover: true}).bindTooltip("<b>Hornwright Summer Villa</b><br>Bobblehead x1<br>Magazine x2<br>Cap Stash x1<br>Recipe/Plan").addTo(ol_loc);
 //Toxic Valley
