@@ -261,3 +261,18 @@
 .icon-mysteries:before {
   content: "\e94e";
 }
+.icon-death:before {
+  content: "\e94f";
+}
+.icon-honey:before {
+  content: "\e950";
+}
+.icon-altar:before {
+  content: "\e951";
+}
+.icon-car:before {
+  content: "\e952";
+}
+.icon-boat:before {
+  content: "\e953";
+}
