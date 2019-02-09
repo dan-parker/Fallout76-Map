@@ -653,15 +653,42 @@ function tooltipMapTemplate(title,img='',text='') {
 //Secondary Location
 var mark_plane2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'plane', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Plane/Airport
 var mark_boat2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'boat', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Boat
+var mark_shack2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'shack', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Shack
+var mark_altar2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'altar', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Altar/Totem
+var mark_honey2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'honey', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Hive
+var mark_cabin2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cabin', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Cabin
+var mark_cave2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'mine', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Mine/Cave
+var mark_camp2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'camp', glyphColor: '', glyphSize: '22px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Camp
+var mark_lookout2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 	//Lookout
+var mark_car2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'car', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Car
+var mark_pond2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pond', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Pond
 
 
 
 //The Forest
     L.marker(rc.unproject([853,688]), {icon: mark_plane2, title: "Biplane Crash", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Biplane Crash',"","")).addTo(ol_loc2);
-    L.marker(rc.unproject([1015,940]), {icon: mark_plane2, title: "Biplane Crash", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Biplane Crash',"","")).addTo(ol_loc2);
-    L.marker(rc.unproject([667,1079]), {icon: mark_plane2, title: "Vertibird Crash", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Virtibird Crash',"","")).addTo(ol_loc2);
     L.marker(rc.unproject([884,713]), {icon: mark_boat2, title: "Upturned Boat", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Upturned Boat',"","")).addTo(ol_loc2);
     L.marker(rc.unproject([916,713]), {icon: mark_boat2, title: "Split Boat", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Split Boat',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([853,740]), {icon: mark_shack2, title: "Tin Roof Shack", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tin Roof Shack',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([815,850]), {icon: mark_altar2, title: "Burned Branch Altar", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Burned Branch Altar',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([920,860]), {icon: mark_honey2, title: "North Kanawha Hive", riseOnHover: true}).bindTooltip(tooltipMapTemplate('North Kanawha Hive',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([840,900]), {icon: mark_cabin2, title: "Settler's Cabin", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Settler's Cabin","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([860,940]), {icon: mark_altar2, title: "Cultist Totem", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Cultist Totem","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([1015,940]), {icon: mark_plane2, title: "Biplane Crash", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Biplane Crash',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([670,980]), {icon: mark_cave2, title: "Archer Cave", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Archer Cave',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([735,960]), {icon: mark_altar2, title: "Cultist Totem", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Cultist Totem","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([705,1000]), {icon: mark_camp2, title: "Grass Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Grass Camp","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([870,1040]), {icon: mark_lookout2, title: "Banjo Tower", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Banjo Tower","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([900,1010]), {icon: mark_cave2, title: "Kanawha Alcove", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Kanawha Alcove',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([970,1015]), {icon: mark_camp2, title: "Weapon Worker's Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Weapon Worker's Camp","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([575,1110]), {icon: mark_car2, title: "Terminal Log Collision", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Terminal Log Collision","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([667,1079]), {icon: mark_plane2, title: "Vertibird Crash", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Virtibird Crash',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([895,1065]), {icon: mark_shack2, title: "Hillside Shed", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Hillside Shed',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([650,1170]), {icon: mark_camp2, title: "Prehistoric Bones Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Prehistoric Bones Camp","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([870,1140]), {icon: mark_pond2, title: "Wixon Pond", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Wixon Pond","","")).addTo(ol_loc2);
+
+
+
     L.marker(rc.unproject([660,1515]), {icon: mark_boat2, title: "Beached Boat", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Beached Boat',"","")).addTo(ol_loc2);
 
 
