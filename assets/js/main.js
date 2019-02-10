@@ -662,7 +662,14 @@ var mark_camp2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'ico
 var mark_lookout2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 	//Lookout
 var mark_car2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'car', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Car
 var mark_pond2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'pond', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Pond
-
+var mark_death2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'death', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Corpse
+var mark_bridge2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'bridge', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Corpse
+var mark_park2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 		//Corpse
+var mark_factory2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'factory', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 	//Corpse
+var mark_farm2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 	//Corpse
+var mark_radiotower2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'radiotower', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 	//Corpse
+var mark_dock2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'dock', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 	//Corpse
+var mark_table2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'table', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo2'}); 	//Corpse
 
 
 //The Forest
@@ -686,10 +693,49 @@ var mark_pond2 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'ico
     L.marker(rc.unproject([895,1065]), {icon: mark_shack2, title: "Hillside Shed", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Hillside Shed',"","")).addTo(ol_loc2);
     L.marker(rc.unproject([650,1170]), {icon: mark_camp2, title: "Prehistoric Bones Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Prehistoric Bones Camp","","")).addTo(ol_loc2);
     L.marker(rc.unproject([870,1140]), {icon: mark_pond2, title: "Wixon Pond", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Wixon Pond","","")).addTo(ol_loc2);
-
-
-
+    L.marker(rc.unproject([860,1170]), {icon: mark_honey2, title: "Wixon Pond Hive", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Wixon Pond Hive',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([575,1255]), {icon: mark_honey2, title: "Alpine River Hive", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Alpine River Hive',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([800,1215]), {icon: mark_death2, title: "Corpse Pile", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Corpse Pile',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([960,1220]), {icon: mark_shack2, title: "Dog Kennel", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Dog Kennel',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([740,1320]), {icon: mark_cabin2, title: "Gray Cottage", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Gray Cottage',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([890,1310]), {icon: mark_camp2, title: "River Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate('River Camp',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([950,1290]), {icon: mark_bridge2, title: "Covered Bridge", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Covered Bridge',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([600,1370]), {icon: mark_death2, title: "Throne Dual", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Throne Dual',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([660,1490]), {icon: mark_car2, title: "Delivery Van", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Delivery Van',"","")).addTo(ol_loc2);
     L.marker(rc.unproject([660,1515]), {icon: mark_boat2, title: "Beached Boat", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Beached Boat',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([790,1425]), {icon: mark_bridge2, title: "Under Bridge Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Under Bridge Camp',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([965,1410]), {icon: mark_park2, title: "New River Gorge Resort Adventure Park", riseOnHover: true}).bindTooltip(tooltipMapTemplate('New River Gorge Resort Adventure Park',"","")).addTo(ol_loc2);
+
+    L.marker(rc.unproject([415,220]), {icon: mark_factory2, title: "Wrecked Warehouse", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Wrecked Warehouse',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([500,220]), {icon: mark_farm2, title: "Abandoned Farm", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Abandoned Farm',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([530,200]), {icon: mark_camp2, title: "Golfer's Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Golfer's Camp","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([550,280]), {icon: mark_camp2, title: "Outcrop Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Outcrop Camp","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([730,230]), {icon: mark_shack2, title: "Bird Watchers", riseOnHover: true}).bindTooltip(tooltipMapTemplate("Bird Watchers","","")).addTo(ol_loc2);
+    L.marker(rc.unproject([490,310]), {icon: mark_car2, title: "R81 Collision", riseOnHover: true}).bindTooltip(tooltipMapTemplate('R81 Collision',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([460,380]), {icon: mark_pond2, title: "Safe Pond", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Safe Pond',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([730,410]), {icon: mark_honey2, title: "Aaronholdt Hive", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Aaronholdt Hive',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([540,480]), {icon: mark_car2, title: "Nuka Crash", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Nuka Crash',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([650,490]), {icon: mark_pond2, title: "Ridgetop Lake", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Ridgetop Lake',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([430,540]), {icon: mark_farm2, title: "Two Barn Farm", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Two Barn Farm',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([450,600]), {icon: mark_camp2, title: "Raft Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Raft Camp',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([400,650]), {icon: mark_farm2, title: "Tinker Barn", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tinker Barn',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([670,630]), {icon: mark_table2, title: "Party Table", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Party Table',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([765,630]), {icon: mark_car2, title: "Scarecrow Truck", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Scarecrow Truck',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([630,690]), {icon: mark_shack2, title: "Safecracker Shack", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Safecracker Shack',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([630,770]), {icon: mark_car2, title: "Jackknifed Truck", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Jackknifed Truck',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([600,800]), {icon: mark_radiotower2, title: "Decommissioned Radio Tower", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Decommissioned Radio Tower',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([720,850]), {icon: mark_pond2, title: "Tire Pond", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tire Pond',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([380,830]), {icon: mark_dock2, title: "Radioactive Dock", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Radioactive Dock',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([400,930]), {icon: mark_boat2, title: "Junk Boat", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Junk Boat',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([590,940]), {icon: mark_camp2, title: "Billboard Camp", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Billboard Camp',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([680,930]), {icon: mark_camp2, title: "Tarp Tent", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tarp Tent',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([430,1140]), {icon: mark_altar2, title: "Old Tree Altars", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Old Tree Altars',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([370,1190]), {icon: mark_honey2, title: "Point Pleasant Hive", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Point Pleasant Hive',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([515,1200]), {icon: mark_table2, title: "Teddy Bear Picnic", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Teddy Bear Picnic',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([380,1260]), {icon: mark_dock2, title: "Shack Dock", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Shack Dock',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([470,1340]), {icon: mark_car2, title: "Truckslide", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Truckslide',"","")).addTo(ol_loc2);
+    L.marker(rc.unproject([570,1340]), {icon: mark_car2, title: "Pylon Crash", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Pylon Crash',"","")).addTo(ol_loc2);
+
 
 
 //Let's do our layer filters
