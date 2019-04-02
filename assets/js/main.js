@@ -48,7 +48,7 @@ var mark_tr = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon',
 var mark_wr =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'workbench', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_wr'}); 	//Public Workbench
 var mark_va76 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault76', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault76
 var mark_va63 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault63', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault63
-var mark_va65 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault65
+var mark_va51 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault51
 var mark_va94 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault94', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault94
 var mark_va96 = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault96', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_va'}); 	//Vault96
 var mark_va = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'vault', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_va'}); 		//Vault
@@ -195,7 +195,7 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([2574,667]), {icon: mark_va94, title: 'Vault 94', riseOnHover: true}).bindTooltip("<b>Vault 94</b>").addTo(ol_vault);
     L.marker(rc.unproject([1759,2774]), {icon: mark_va96, title: 'Vault 96', riseOnHover: true}).bindTooltip("<b>Vault 96</b>").addTo(ol_vault);
     L.marker(rc.unproject([870,2673]), {icon: mark_va63, title: 'Vault 63', riseOnHover: true}).bindTooltip("<b>Vault 63</b>").addTo(ol_vault);
-    L.marker(rc.unproject([690,190]), {icon: mark_va65, title: 'Vault 65', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Vault 65","","Added in Patch 7")).addTo(ol_vault);
+    L.marker(rc.unproject([690,190]), {icon: mark_va51, title: 'Vault 51', riseOnHover: true}).bindTooltip(tooltipMapTemplate("Vault 51","","Added in Patch 7")).addTo(ol_vault);
 
 //Public Workshops
     L.marker(rc.unproject([1140,975]), {icon: mark_wr, title: "Gorge Junkyard", riseOnHover: true}).bindTooltip(tooltipTemplate("Gorge Junkyard")).addTo(ol_wb);
