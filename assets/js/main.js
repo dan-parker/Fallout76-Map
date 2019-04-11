@@ -363,6 +363,7 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([781,2178]), {icon: mark_bunker, title: "Hornwright Air Purifier Site #01", riseOnHover: true}).bindTooltip("<b>Hornwright Air Purifier Site #01</b>").addTo(ol_loc);
     L.marker(rc.unproject([929,2342]), {icon: mark_quarry, title: "The Burning Mine", riseOnHover: true}).bindTooltip("<b>The Burning Mine</b><br>Bobblehead x4<br>Magazine x4").addTo(ol_loc);
     L.marker(rc.unproject([985,2220]), {icon: mark_perch, title: "Widow's Perch", riseOnHover: true}).bindTooltip("<b>Widow's Perch</b><br>Bobblehead x1<br>Magazine x1").addTo(ol_loc);
+    L.marker(rc.unproject([960,2275]), {icon: mark_cabin, title: "Pylon Ambush Site", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Pylon Ambush Site',"","Added in Patch 8")).addTo(ol_loc);
     L.marker(rc.unproject([1106,2142]), {icon: mark_raider, title: "Bleeding Kate's Grindhouse", riseOnHover: true}).bindTooltip("<b>Bleeding Kate's Grindhouse</b>").addTo(ol_loc);
     L.marker(rc.unproject([1200,2231]), {icon: mark_radiotower, title: "Relay Tower DP-B5-21", riseOnHover: true}).bindTooltip("<b>Relay Tower DP-B5-21</b><br>Recipe/Plan").addTo(ol_loc);
     L.marker(rc.unproject([1234,2271]), {icon: mark_mine, title: "Uncanny Caverns", riseOnHover: true}).bindTooltip("<b>Uncanny Caverns</b><br>Bobblehead x4<br>Magazine x4<br>Recipe/Plan").addTo(ol_loc);
