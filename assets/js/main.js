@@ -127,6 +127,8 @@ var mark_dish =  L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'ico
 var mark_monorail = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'monorail', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Monorail
 var mark_church = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'church', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Church
 var mark_antiques = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'antiques', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Antiques
+var mark_sewer = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'sewer', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Sewer
+
 
 //Let's create our Tooltip Template
 function tooltipTemplate(title,bobblehead=0,magazine=0,capstash=0,recipe='') {
@@ -499,7 +501,9 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([2376,1584]), {icon: mark_mine, title: "Hawke's Refuge", riseOnHover: true}).bindTooltip("<b>Hawke's Refuge</b>").addTo(ol_loc);
     L.marker(rc.unproject([2503,1630]), {icon: mark_cabin, title: "Sunday Brothers' Cabin", riseOnHover: true}).bindTooltip("<b>Sunday Brothers' Cabin</b>").addTo(ol_loc);
     L.marker(rc.unproject([2570,1536]), {icon: mark_substation, title: "Thunder Mountain Substation TM-01", riseOnHover: true}).bindTooltip("<b>Thunder Mountain Substation TM-01</b>").addTo(ol_loc);
-    L.marker(rc.unproject([2659,1613]), {icon: mark_vendortown, title: "Harpers Ferry (Free State)", riseOnHover: true}).bindTooltip(tooltipMapTemplate('<span class="icon-freestate"></span> Harpers Ferry (Free State)',"","")).addTo(ol_loc);
+    L.marker(rc.unproject([2675,1610]), {icon: mark_vendortown, title: "Harpers Ferry (Free State)", riseOnHover: true}).bindTooltip(tooltipMapTemplate('<span class="icon-freestate"></span> Harpers Ferry (Free State)',"","")).addTo(ol_loc);
+    L.marker(rc.unproject([2640,1620]), {icon: mark_sewer, title: "The Burrows North", riseOnHover: true}).bindTooltip(tooltipMapTemplate('The Burrows North',"","")).addTo(ol_loc);
+    L.marker(rc.unproject([2650,1655]), {icon: mark_sewer, title: "The Burrows South", riseOnHover: true}).bindTooltip(tooltipMapTemplate('The Burrows South',"","")).addTo(ol_loc);
     L.marker(rc.unproject([2753,1432]), {icon: mark_houses, title: "Southern Belle Motel", riseOnHover: true}).bindTooltip("<b>Southern Belle Motel</b>").addTo(ol_loc);
     L.marker(rc.unproject([2841,1426]), {icon: mark_mine, title: "Abandoned Waste Dump", riseOnHover: true}).bindTooltip("<b>Abandoned Waste Dump</b>").addTo(ol_loc);
     L.marker(rc.unproject([2900,1536]), {icon: mark_town, title: "Tanagra Town", riseOnHover: true}).bindTooltip("<b>Tanagra Town</b>").addTo(ol_loc);
