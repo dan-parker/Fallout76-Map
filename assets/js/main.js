@@ -463,6 +463,7 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([1548,2432]), {icon: mark_base, title: "Site Charlie", riseOnHover: true}).bindTooltip("<b>Site Charlie</b>").addTo(ol_loc);
     L.marker(rc.unproject([1550,2462]), {icon: mark_waterplant, title: "R&G Processing Services", riseOnHover: true}).bindTooltip("<b>R&G Processing Services</b>").addTo(ol_loc);
     L.marker(rc.unproject([1720,2545]), {icon: mark_pond, title: "Spruce Knob Channels", riseOnHover: true}).bindTooltip("<b>Spruce Knob Channels</b>").addTo(ol_loc);
+    L.marker(rc.unproject([1910,2490]), {icon: mark_lookout, title: "South Mountain Lookout", riseOnHover: true}).bindTooltip("<b>South Mountain Lookout</b>").addTo(ol_loc);
     L.marker(rc.unproject([1768,2494]), {icon: mark_pond, title: "Spruce Knob Lake", riseOnHover: true}).bindTooltip("<b>Spruce Knob Lake</b>").addTo(ol_loc);
     L.marker(rc.unproject([1809,2437]), {icon: mark_tree, title: "Spruce Knob Campground", riseOnHover: true}).bindTooltip("<b>Spruce Knob Campground</b>").addTo(ol_loc);
     L.marker(rc.unproject([2153,2526]), {icon: mark_monorail, title: "Monorail Elevator", riseOnHover: true}).bindTooltip("<b>Monorail Elevator</b>").addTo(ol_loc);
