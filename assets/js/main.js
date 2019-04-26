@@ -69,6 +69,7 @@ var mark_fair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon
 var mark_vendorfair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Fair-Vendor
 var mark_waterplant = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'waterplant', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Water Treatment
 var mark_substation = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'substation', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Substation
+var mark_ruintown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'ruintown', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Town-Ruined
 var mark_town = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'town', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Town
 var mark_vendortown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'town', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Town-Vendor
 var mark_plane = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'plane', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Plane/Airport
@@ -505,8 +506,9 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([2640,1620]), {icon: mark_sewer, title: "The Burrows North", riseOnHover: true}).bindTooltip(tooltipMapTemplate('The Burrows North',"","")).addTo(ol_loc);
     L.marker(rc.unproject([2650,1655]), {icon: mark_sewer, title: "The Burrows South", riseOnHover: true}).bindTooltip(tooltipMapTemplate('The Burrows South',"","")).addTo(ol_loc);
     L.marker(rc.unproject([2753,1432]), {icon: mark_houses, title: "Southern Belle Motel", riseOnHover: true}).bindTooltip("<b>Southern Belle Motel</b>").addTo(ol_loc);
-    L.marker(rc.unproject([2841,1426]), {icon: mark_mine, title: "Abandoned Waste Dump", riseOnHover: true}).bindTooltip("<b>Abandoned Waste Dump</b>").addTo(ol_loc);
-    L.marker(rc.unproject([2900,1536]), {icon: mark_town, title: "Tanagra Town", riseOnHover: true}).bindTooltip("<b>Tanagra Town</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2841,1435]), {icon: mark_mine, title: "Abandoned Waste Dump", riseOnHover: true}).bindTooltip("<b>Abandoned Waste Dump</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2900,1536]), {icon: mark_ruintown, title: "Tanagra Town", riseOnHover: true}).bindTooltip("<b>Tanagra Town</b>").addTo(ol_loc);
+    L.marker(rc.unproject([2845,1550]), {icon: mark_farm, title: "Delano Grange", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Delano Grange',"","Added in Patch 8.5")).addTo(ol_loc);
     L.marker(rc.unproject([2910,1623]), {icon: mark_bunker, title: "Ransacked Bunker", riseOnHover: true}).bindTooltip("<b>Ransacked Bunker</b>").addTo(ol_loc);
     L.marker(rc.unproject([2682,1751]), {icon: mark_rocket, title: "Big B's Rest Stop", riseOnHover: true}).bindTooltip("<b>Big B's Rest Stop</b>").addTo(ol_loc);
     L.marker(rc.unproject([2924,1729]), {icon: mark_headquarters, title: "Valley Galleria", riseOnHover: true}).bindTooltip("<b>Valley Galleria</b>").addTo(ol_loc);
