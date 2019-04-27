@@ -9,7 +9,7 @@ var ol_map = L.layerGroup();
 var ol_tape = L.layerGroup();
 var ol_wb = L.layerGroup();
 var ol_rift = L.layerGroup();
-
+var ol_event = L.layerGroup();
 var ol_locv = L.layerGroup();
 
 // the tile layer containing the image generated with `gdal2tiles --leaflet -p raster -w none <img> tiles`
@@ -57,6 +57,9 @@ var mark_tape = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon
 var mark_fcore = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fcore', glyphColor: '', glyphSize: '34px', glyphAnchor: [0,0], className:'mark_fcore'}); 	//Fusion Core
 var mark_parmor = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'parmor', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_parmor'}); //Power Armor
 var mark_rift = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fissure', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}); 	//Fissure
+var mark_cam = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'camera', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_camera'}); 	//Tourist
+var mark_unknown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'unknown', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}) 	//Random Spawn
+
 
 var mark_farm = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
 var mark_cabin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cabin', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'});  		//Farm/Cabin
@@ -662,6 +665,29 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([1260,2122]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
     L.marker(rc.unproject([699,2774]), {icon: mark_rift, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
 
+//Random Spawn/Camera
+    L.marker(rc.unproject([1320,2229]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([630,1830]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([340,1100]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([530,630]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1000,1110]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1640,1210]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([220,2540]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1970,480]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1780,570]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1830,430]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1300,280]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1550,2020]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2468,2600]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1200,320]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2815,1080]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2620,1780]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2400,2850]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2820,1515]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1790,1990]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2775,350]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2670,320]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([570,1870]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
 
 
 //Secondary Location
@@ -796,6 +822,7 @@ var overlays = {
 	"Fusion Core": ol_pwr,
 	"Holotape": ol_tape,
 	"Location": ol_loc,
+	"Random Encounter": ol_event,
 	"Secondary Location": ol_loc2,
 	"Power Armor": ol_pa,
 	"Train Station": ol_train,

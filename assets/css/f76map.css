@@ -285,3 +285,9 @@
 .icon-ruintown:before {
   content: "\e956";
 }
+.icon-unknown:before {
+  content: "\e957";
+}
+.icon-camera:before {
+  content: "\e958";
+}
