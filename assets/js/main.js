@@ -679,15 +679,48 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([1300,280]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
     L.marker(rc.unproject([1550,2020]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
     L.marker(rc.unproject([2468,2600]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
-    L.marker(rc.unproject([1200,320]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
-    L.marker(rc.unproject([2815,1080]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1210,330]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2820,1100]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
     L.marker(rc.unproject([2620,1780]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
     L.marker(rc.unproject([2400,2850]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
     L.marker(rc.unproject([2820,1515]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
     L.marker(rc.unproject([1790,1990]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
-    L.marker(rc.unproject([2775,350]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2790,350]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
     L.marker(rc.unproject([2670,320]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
     L.marker(rc.unproject([570,1870]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+
+    L.marker(rc.unproject([1680,250]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2012,210]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2070,220]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2150,290]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2450,280]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([400,470]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([560,335]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([540,530]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([730,545]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1015,300]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2300,440]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2770,370]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2800,530]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([360,765]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([560,720]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2015,700]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2600,680]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2590,750]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2900,710]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2860,830]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([410,970]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1235,1060]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2360,1010]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2670,1040]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2750,1085]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2900,1085]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([385,1260]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([450,1300]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([750,1320]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([920,1330]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1065,1315]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+
 
 
 //Secondary Location
