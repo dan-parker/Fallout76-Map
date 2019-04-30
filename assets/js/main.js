@@ -56,8 +56,9 @@ var mark_map = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon'
 var mark_tape = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'holotape', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_tape'}); 	//Holotape
 var mark_fcore = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fcore', glyphColor: '', glyphSize: '34px', glyphAnchor: [0,0], className:'mark_fcore'}); 	//Fusion Core
 var mark_parmor = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'parmor', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_parmor'}); //Power Armor
-<<<<<<< HEAD
 var FissureMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fissure', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}); 	//Fissure
+var mark_cam = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'camera', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_camera'}); 	//Tourist
+var mark_unknown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'unknown', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}) 	//Random Spawn
 
 var FarmMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
 var CabinMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cabin', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'});  		//Farm/Cabin
@@ -67,21 +68,6 @@ var RadioTowerMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix
 var LookoutTowerMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lookout
 var FactoryMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'factory', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lumberyard
 var AmusementParkMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fair
-=======
-var mark_rift = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fissure', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}); 	//Fissure
-var mark_cam = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'camera', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_camera'}); 	//Tourist
-var mark_unknown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'unknown', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}) 	//Random Spawn
-
-
-var mark_farm = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
-var mark_cabin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cabin', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'});  		//Farm/Cabin
-var mark_lighthouse = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lighthouse', glyphColor: '',glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Lighthouse
-var mark_shack = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'shack', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Shack/Lab
-var mark_radiotower = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'radiotower', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Relay Tower
-var mark_lookout = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lookout
-var mark_factory = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'factory', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lumberyard
-var mark_fair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fair
->>>>>>> bf39382c38d2a959d081986c494c55c5e9a31600
 var mark_vendorfair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Fair-Vendor
 var IndustrialDomeMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'waterplant', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Water Treatment
 var ElectricalSubstationMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'substation', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Substation
