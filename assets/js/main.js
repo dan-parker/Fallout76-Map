@@ -9,7 +9,7 @@ var ol_map = L.layerGroup();
 var ol_tape = L.layerGroup();
 var ol_wb = L.layerGroup();
 var ol_rift = L.layerGroup();
-
+var ol_event = L.layerGroup();
 var ol_locv = L.layerGroup();
 
 // the tile layer containing the image generated with `gdal2tiles --leaflet -p raster -w none <img> tiles`
@@ -56,6 +56,7 @@ var mark_map = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon'
 var mark_tape = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'holotape', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_tape'}); 	//Holotape
 var mark_fcore = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fcore', glyphColor: '', glyphSize: '34px', glyphAnchor: [0,0], className:'mark_fcore'}); 	//Fusion Core
 var mark_parmor = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'parmor', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_parmor'}); //Power Armor
+<<<<<<< HEAD
 var FissureMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fissure', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}); 	//Fissure
 
 var FarmMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
@@ -66,6 +67,21 @@ var RadioTowerMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix
 var LookoutTowerMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lookout
 var FactoryMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'factory', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lumberyard
 var AmusementParkMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fair
+=======
+var mark_rift = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fissure', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}); 	//Fissure
+var mark_cam = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'camera', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_camera'}); 	//Tourist
+var mark_unknown = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'unknown', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_rift'}) 	//Random Spawn
+
+
+var mark_farm = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'farm', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Farm/Homestead
+var mark_cabin = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'cabin', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'});  		//Farm/Cabin
+var mark_lighthouse = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lighthouse', glyphColor: '',glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Lighthouse
+var mark_shack = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'shack', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Shack/Lab
+var mark_radiotower = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'radiotower', glyphColor: '', glyphSize: '32px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Relay Tower
+var mark_lookout = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'lookout', glyphColor: '', glyphSize: '30px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lookout
+var mark_factory = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'factory', glyphColor: '', glyphSize: '26px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Lumberyard
+var mark_fair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 		//Fair
+>>>>>>> bf39382c38d2a959d081986c494c55c5e9a31600
 var mark_vendorfair = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'fair', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_vendor'}); 	//Fair-Vendor
 var IndustrialDomeMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'waterplant', glyphColor: '', glyphSize: '28px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Water Treatment
 var ElectricalSubstationMarker = L.icon.glyph({ iconAnchor: [15,20], iconUrl: null, prefix: 'icon', glyph: 'substation', glyphColor: '', glyphSize: '24px', glyphAnchor: [0,0], className:'mark_lo'}); 	//Substation
@@ -662,6 +678,62 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([1260,2122]), {icon: FissureMarker, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
     L.marker(rc.unproject([699,2774]), {icon: FissureMarker, title: "Fissure", riseOnHover: true}).bindTooltip("<b>Fissure</b>").addTo(ol_rift);
 
+//Random Spawn/Camera
+    L.marker(rc.unproject([1320,2229]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([630,1830]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([340,1100]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([530,630]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1000,1110]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1640,1210]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([220,2540]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1970,480]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1780,570]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1830,430]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1300,280]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1550,2020]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2468,2600]), {icon: mark_cam, title: "Tourist", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Tourist',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1210,330]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2820,1100]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2620,1780]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2400,2850]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2820,1515]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1790,1990]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2790,350]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2670,320]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([570,1870]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+
+    L.marker(rc.unproject([1680,250]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2012,210]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2070,220]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2150,290]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2450,280]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([400,470]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([560,335]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([540,530]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([730,545]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1015,300]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2300,440]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2770,370]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2800,530]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([360,765]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([560,720]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2015,700]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2600,680]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2590,750]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2900,710]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2860,830]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([410,970]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1235,1060]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2360,1010]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2670,1040]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2750,1085]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([2900,1085]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([385,1260]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([450,1300]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([750,1320]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([920,1330]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+    L.marker(rc.unproject([1065,1315]), {icon: mark_unknown, title: "Random Encounter", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Random Encounter',"",'')).addTo(ol_event);
+
 
 
 //Secondary Location
@@ -796,6 +868,7 @@ var overlays = {
 	"Fusion Core": ol_pwr,
 	"Holotape": ol_tape,
 	"Location": ol_loc,
+	"Random Encounter": ol_event,
 	"Secondary Location": ol_loc2,
 	"Power Armor": ol_pa,
 	"Train Station": ol_train,
