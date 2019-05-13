@@ -1,5 +1,6 @@
 {
   Exports Map Marker data to JSON
+  Intended for Fallout 76
 }
 unit userscript;
 
@@ -36,7 +37,7 @@ begin
 				If (FixedFormID(e) = 4016968) then
 					Row := '{"id":'+IntToStr(FixedFormID(e))+',"name":"Monongah Power Plan Yard",'
 				else
-					Row := '{"id":'+IntToStr(FixedFormID(e))+',"name":"'+GetEditValue(ElementByName(ElementByName(e,'Map Marker'),'FULL - Name'))+'",';
+					Row := '{"id":'+IntToStr(FixedFormID(e))+',"name":"'+StringReplace(GetEditValue(ElementByName(ElementByName(e,'Map Marker'),'FULL - Name')),'Fast Travel Point: ','',[rfReplaceAll])+'",';
 				//Overwrite individual with workshop icons, like on in-game map.
 				If (wbStringListInString(Workshops,IntToStr(FixedFormID(e))) <> -1) then
 					Row := Row +  '"type":"WorkshopMarker",'
