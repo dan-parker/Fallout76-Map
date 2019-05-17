@@ -577,6 +577,7 @@ function tooltipMapTemplate(title,img='',text='') {
     L.marker(rc.unproject([1680,1958]), {icon: TrainStationMarker, title: "Whitespring Station (Whitespring)", riseOnHover: true}).bindTooltip(tooltipMapTemplate('<span class="icon-resort"></span> Whitespring Station (Whitespring)',"","")).addTo(ol_train);
     L.marker(rc.unproject([1575,2577]), {icon: TrainStationMarker, title: "R&G Station (Raiders)", riseOnHover: true}).bindTooltip(tooltipMapTemplate('<span class="icon-raider"></span> R&G Station (Raiders)',"",'')).addTo(ol_train);
     L.marker(rc.unproject([2583,2693]), {icon: TrainStationMarker, title: "Watoga Station (Unique)", riseOnHover: true}).bindTooltip(tooltipMapTemplate('<span class="icon-city"></span> Watoga Station (Unique)',"","")).addTo(ol_train);
+    L.marker(rc.unproject([2500,1525]), {icon: TrainStationMarker, title: "Berkeley Springs Station (Legendary)", riseOnHover: true}).bindTooltip(tooltipMapTemplate('Berkeley Springs Station (Legendary)',"","")).addTo(ol_train);
 
 //Fusion Core
     L.marker(rc.unproject([948,2032]), {icon: mark_fcore, title: "Fusion Core", riseOnHover: true}).bindTooltip("<b>Fusion Core</b>").addTo(ol_pwr);
