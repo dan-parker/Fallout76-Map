@@ -878,7 +878,8 @@ var searchlayers = L.layerGroup([
 		position:'topright',		
 		layer: searchlayers,
 		initial: false,
-		zoom: 12,
+		textPlaceholder: 'Search...                          ',
+		zoom: 4,
 		marker: false
 	});
 
