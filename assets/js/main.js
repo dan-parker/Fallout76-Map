@@ -15,7 +15,7 @@ var ol_locv = L.layerGroup();
 // the tile layer containing the image generated with `gdal2tiles --leaflet -p raster -w none <img> tiles`
 var baselayer = L.tileLayer('./assets/tiles/{z}/{x}/{y}.png', {
   noWrap: true, 
-  attribution: 'Map data &copy; Bethesda Softworks LLC, a ZeniMax Media company. Trademarks belong to their respective owners. All Rights Reserved.'
+  attribution: 'Map data &copy; Bethesda Softworks LLC, a ZeniMax Media company. Trademarks belong to their respective owners. All Rights Reserved.<br/>See source at: <a href="https://github.com/dan-parker/Fallout76-Map">https://github.com/dan-parker/Fallout76-Map</a>'
 });
 
 // create the map
