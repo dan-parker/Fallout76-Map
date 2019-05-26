@@ -2,6 +2,9 @@
 A semi interactive map for Fallout 76
 Demo: https://dan-parker.github.io/Fallout76-Map/index.html
 
+This is being largly replaced by a datamined version at:
+https://github.com/dan-parker/YASSM
+
 A Fallout 76 map using the Leaflet map library
 https://leafletjs.com/
 
